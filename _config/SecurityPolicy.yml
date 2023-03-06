@@ -1,0 +1,4 @@
+Pikselin\base\SecurityPolicy:
+    - headers:
+        - X-Frame-Options: SAMEORIGIN
+        - Referrer-Policy: same-origin

@@ -16,7 +16,12 @@ use SilverStripe\ORM\DataExtension;
         public function onBeforeInit() {
             
             // add csp headers
-            $this->owner->getResponse()->addHeader('X-Powered-By', "ASH");
+            
+            
+            foreach (self::$headers as $k => $v) {
+                $this->owner->getResponse()->addHeader($k, $v);    
+            }
+            
             
 
         }
