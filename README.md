@@ -44,9 +44,10 @@ You can also create CSP and general site headers using this module. Just create 
 Tag manager and GA4. Just add the account ID for one of these to have them included
 
 ### Google analytics
+
     <% if $GACode %>$GACode<% end_if %>
 
-
 #### Tag manager
-    <% if $SiteConfig.TagManagerNoScript %>$SiteConfig.TagManagerNoScript<% end_if %>
-    <% if $SiteConfig.TagManagerCode %>$SiteConfig.TagManagerCode<% end_if %>
+
+    <% if $TagManagerNoScript %>$TagManagerNoScript<% end_if %>
+    <% if $TagManagerCode %>$TagManagerCode<% end_if %>

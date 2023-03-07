@@ -18,6 +18,7 @@ class BaseSiteTreeExtension extends DataExtension {
 
             return $arrayData->renderWith('GACode');
         }
+        return false;
     }
 
     public function TagManagerCode() {
@@ -30,6 +31,7 @@ class BaseSiteTreeExtension extends DataExtension {
 
             return $arrayData->renderWith('TagManagerCode');
         }
+        return false;
     }
 
     public function TagManagerNoScript() {
@@ -41,5 +43,6 @@ class BaseSiteTreeExtension extends DataExtension {
 
             return $arrayData->renderWith('TagManagerNoScript');
         }
+        return false;
     }
 }
