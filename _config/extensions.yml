@@ -1,7 +1,8 @@
 SilverStripe\CMS\Model\SiteTree:
   extensions:
-    - Pikselin\base\BaseSiteTreeController
+    - Pikselin\base\BaseSiteTreeExtension
+    - Pikselin\base\SecurityPolicyExtension
 SilverStripe\CMS\Controllers\ContentController:
   extensions:
     - Pikselin\base\BaseContentController
-    - Pikselin\base\SecurityPolicy
+    - Pikselin\base\SecurityPolicyController
