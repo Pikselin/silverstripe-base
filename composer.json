@@ -21,8 +21,7 @@
         "silverstripe/googlesitemaps": "^2.2",
         "gorriecoe/silverstripe-menu": "^2.0",
         "ryanpotter/silverstripe-cms-theme": "^3.4",
-        "dnadesign/silverstripe-elemental": "^4",
-        "nswdpc/silverstripe-csp": "^0.4.0"  
+        "dnadesign/silverstripe-elemental": "^4"
     },
     "config": {
         "process-timeout": 600

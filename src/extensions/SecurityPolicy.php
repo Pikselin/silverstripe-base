@@ -15,20 +15,23 @@ use SilverStripe\ORM\DataExtension;
         private static $csp_headers = [];
         
         public function onBeforeInit() {
-            print_r(self::$headers);
-            print_r(self::$csp_headers);
+            $headers = $this->config()->get('headers');
+            $csp_headers = $this->config()->get('csp_headers');
+            
+            print_r($headers);
+            print_r($csp_headers);  
             // base headers
-            if(is_array(self::$headers)) {
-            foreach (self::$headers as $k => $v) {
+            if(is_array($headers)) {
+            foreach ($headers as $k => $v) {
                 $this->owner->getResponse()->addHeader($k, $v);
             }                
             }
 
             
             // CSP headers
-            if(is_array(self::$csp_headers)) {
+            if(is_array($csp_headers)) {
                 $directives = [];
-                foreach(self::$csp_headers as $k => $v) {
+                foreach($csp_headers as $k => $v) {
                     // is the value also an array
                     if(is_array($v)) {
                         $vals = implode(' ',$v);
