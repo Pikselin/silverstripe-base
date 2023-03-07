@@ -42,10 +42,10 @@ namespace Pikselin\base {
                 foreach ($csp_headers as $k => $v) {
                     if (is_array($v)) {
                         if ($use_nonce) {
-                            $v[] = '\'nonce-' . $this->owner->StoredNonce().'\'';
+                            $v[] = str_replace('%NONCE%', $this->owner->StoredNonce(), "'nonce-%NONCE%'");
                         }
                         $vals = implode(' ', $v);
-                        $directives[] = $k . ' ' . $vals . ';';
+                        $directives[] = str_replace(['%KEY%','%VALS%'], [$k, $vals], "%KEY% %VALS%;");
                     }
                 }
                 $cspdirectives = implode('', $directives);
