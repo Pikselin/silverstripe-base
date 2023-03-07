@@ -22,6 +22,7 @@ Base theme can be overridden from within admin > settings
 Nonce value can get accessed via the page global $StoredNonce. Useful for all inline scripts.
 
 You can also create CSP and general site headers using this module. Just create a yml config like the following:
+
     Pikselin\base\SecurityPolicyController:
     #  use_nonce: false
     #  csp_type: Content-Security-Policy
