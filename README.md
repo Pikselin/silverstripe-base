@@ -14,6 +14,8 @@ includes the following modules
     dnadesign/silverstripe-elemental
     nswdpc/silverstripe-csp
     pikselin/silverstripe-admin-edit-link
+    purplespider/asset-alt-text
+    silverstripe/sharedraftcontent
 
 ## Override theme. 
 Base theme can be overridden from within admin > settings
