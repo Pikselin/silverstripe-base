@@ -13,6 +13,7 @@ includes the following modules
     ryanpotter/silverstripe-cms-theme
     dnadesign/silverstripe-elemental
     nswdpc/silverstripe-csp
+    pikselin/silverstripe-admin-edit-link
 
 ## Override theme. 
 Base theme can be overridden from within admin > settings
