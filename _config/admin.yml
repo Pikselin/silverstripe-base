@@ -1,18 +1,18 @@
-Silverstripe\SiteConfig\SiteConfig:
-  extensions:
-    - Pikselin\base\BaseSiteConfig
-SilverStripe\Admin\LeftAndMain:
-  cms_background: '#D5141B'
-  cms_border_color: '#ffffff'
-  cms_color: '#ffffff'
-  cms_hover_background: 'inherit'
-  cms_hover_color: currentColor
-  cms_active_background: '#000000'
-  cms_active_color: currentColor
-  cms_drawer_background: '#D5141B'
-  cms_drawer_color: currentColor
-  cms_icon_color: currentColor
-  extra_requirements_css:
-    - /_resources/pikselin-base/client/css/admin.css  
-SilverStripe\SiteConfig\SiteConfig:
-  cms_logo: '_resources/vendor/pikselin/base/client/images/pikselin.jpeg'
+#Silverstripe\SiteConfig\SiteConfig:
+#  extensions:
+#    - Pikselin\base\BaseSiteConfig
+#SilverStripe\Admin\LeftAndMain:
+#  cms_background: '#D5141B'
+#  cms_border_color: '#ffffff'
+#  cms_color: '#ffffff'
+#  cms_hover_background: 'inherit'
+#  cms_hover_color: currentColor
+#  cms_active_background: '#000000'
+#  cms_active_color: currentColor
+#  cms_drawer_background: '#D5141B'
+#  cms_drawer_color: currentColor
+#  cms_icon_color: currentColor
+#  extra_requirements_css:
+#    - /_resources/pikselin-base/client/css/admin.css  
+#SilverStripe\SiteConfig\SiteConfig:
+#  cms_logo: '_resources/vendor/pikselin/base/client/images/pikselin.jpeg'
