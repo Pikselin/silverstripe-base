@@ -1,3 +1,6 @@
+---
+Name: base-headers
+---
 SilverStripe\CMS\Model\SiteTree:
   extensions:
     - Pikselin\base\BaseSiteTreeExtension

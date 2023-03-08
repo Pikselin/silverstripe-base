@@ -1,0 +1,23 @@
+---
+Name: cookie-config
+After:
+  - '*'
+---
+SilverStripe\Control\Session:
+  cookie_secure: true
+  # only works in 4.12
+  cookie_samesite: 'Strict'
+
+# only works in 4.12
+SilverStripe\Control\Cookie:
+  default_samesite: 'Strict'
+
+---
+Name: secure-alc
+Except:
+  environment: dev
+---
+SilverStripe\Core\Injector\Injector:
+  SilverStripe\Security\MemberAuthenticator\CookieAuthenticationHandler:
+    properties:
+      TokenCookieSecure: true
