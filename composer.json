@@ -18,13 +18,9 @@
         "silverstripe/cms": "^4",
         "silverstripe/framework": "^4",
         "innoweb/silverstripe-social-metadata": "dev-master",
-        "silverstripe/googlesitemaps": "^2.2",
-        "gorriecoe/silverstripe-menu": "^2.0",
-        "ryanpotter/silverstripe-cms-theme": "^3.4",
         "dnadesign/silverstripe-elemental": "^4",
         "pikselin/silverstripe-admin-edit-link": "dev-main",
-        "purplespider/asset-alt-text": "^1.1",
-        "silverstripe/sharedraftcontent": "^2.8"        
+     
     },
     "config": {
         "process-timeout": 600
