@@ -4,7 +4,7 @@
 
 # features
 
-##
+## Included modules
 includes the following modules
 
     innoweb/silverstripe-social-metadata
