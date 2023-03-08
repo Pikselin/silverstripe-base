@@ -22,9 +22,7 @@
         "gorriecoe/silverstripe-menu": "^2.0",
         "ryanpotter/silverstripe-cms-theme": "^3.4",
         "dnadesign/silverstripe-elemental": "^4",
-        "pikselin/silverstripe-admin-edit-link": "dev-main",
-        "purplespider/asset-alt-text": "^1.1",
-        "silverstripe/sharedraftcontent": "^2.8"        
+        "pikselin/silverstripe-admin-edit-link": "dev-main"     
     },
     "config": {
         "process-timeout": 600
