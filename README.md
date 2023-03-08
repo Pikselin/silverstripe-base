@@ -12,7 +12,6 @@ includes the following modules
     gorriecoe/silverstripe-menu
     ryanpotter/silverstripe-cms-theme
     dnadesign/silverstripe-elemental
-    nswdpc/silverstripe-csp
     pikselin/silverstripe-admin-edit-link
     purplespider/asset-alt-text
     silverstripe/sharedraftcontent
