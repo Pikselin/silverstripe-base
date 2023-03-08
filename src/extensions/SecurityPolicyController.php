@@ -21,7 +21,7 @@ namespace Pikselin\base {
         private static $nonceable = [
         ];
 
-        public function onBeforeInit() {
+        public function onAfterInit() {
             $csp_type = (null !== $this->config()->get('csp_type')) ? $this->config()->get('csp_type') : self::$csp_type;
 
             $headers = $this->config()->get('headers');
