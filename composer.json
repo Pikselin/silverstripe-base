@@ -19,7 +19,7 @@
         "silverstripe/framework": "^4",
         "innoweb/silverstripe-social-metadata": "dev-master",
         "dnadesign/silverstripe-elemental": "^4",
-        "pikselin/silverstripe-admin-edit-link": "dev-main",
+        "pikselin/silverstripe-admin-edit-link": "dev-main"
      
     },
     "config": {
