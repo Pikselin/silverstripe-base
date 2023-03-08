@@ -1,7 +1,5 @@
 ---
 Name: cookie-config
-After:
-  - '*'
 ---
 SilverStripe\Control\Session:
   cookie_secure: true
