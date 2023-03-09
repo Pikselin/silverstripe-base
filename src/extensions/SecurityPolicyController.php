@@ -47,11 +47,12 @@ namespace Pikselin\base {
 
                     foreach ($csp_headers as $k => $v) {
                         if (is_array($v)) {
+                            // include the nonce value if this directive is in the allowed list
                             if ($use_nonce && in_array($k, self::$nonceable)) {
                                 $v[] = str_replace('%NONCE%', $this->owner->StoredNonce(), "'nonce-%NONCE%'");
                             }
                             $vals = implode(' ', $v);
-                            $directives[] = str_replace(['%KEY%', '%VALS%'], [$k, $vals], "%KEY% %VALS%;");
+                            $directives[] = str_replace(['%KEY%', '%VALS%'], [$k, $vals], "%KEY% %VALS%; ");
                         }
                     }
                     $cspdirectives = implode('', $directives);
