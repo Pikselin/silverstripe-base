@@ -19,6 +19,8 @@ namespace Pikselin\base {
         //private static $csp_type = 'Content-Security-Policy';
         private static $csp_type = false;
         private static $nonceable = [
+            'script-src',
+            'script-src-elem'
         ];
 
         public function onAfterInit() {
@@ -45,7 +47,7 @@ namespace Pikselin\base {
 
                     foreach ($csp_headers as $k => $v) {
                         if (is_array($v)) {
-                            if ($use_nonce) {
+                            if ($use_nonce && in_array($k, self::$nonceable)) {
                                 $v[] = str_replace('%NONCE%', $this->owner->StoredNonce(), "'nonce-%NONCE%'");
                             }
                             $vals = implode(' ', $v);
