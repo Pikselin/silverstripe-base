@@ -41,6 +41,8 @@ If this file doesnt exist then the template helper won't display anything.
 
 Template usage:
 
+    $SVGIcon($Icon, $tag, $title)
+
     $SVGIcon($Icon = 'id-of-image-to-display' [tag=span], [title=false])
 
 Mark-up generated:
@@ -50,6 +52,27 @@ Mark-up generated:
               <use xlink:href="/_resources/{path to icon file}#$Icon"></use>
 	</svg>
     </$tag>
+
+### future considerations for the icon file
+
+Add more than one sprite source using yml configs, example:
+pikselin\base\SVGIcon:
+  image_files:
+    industry_icons:
+      icon_file: themes/mytheme/dist/images/industry.symbol.svg
+    navigation_icons:
+      icon_file: themes/mytheme/dist/images/navigation.symbol.svg
+
+then add an Icon using:
+
+    $SVGIcon('industry_icons, 'industry-sheep, 'span', 'Sheep industry')
+
+Move mark-up to an include template that uses
+
+    $this->renderWith('SVGIcon');
+
+to allow theme lever overrides.
+
 
 ## Image upload validator class
 Simple image upload validation for forms
