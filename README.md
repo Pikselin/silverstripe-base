@@ -30,7 +30,7 @@ A simple class is included that provides a few basic reusable methods for templa
 ## SVGIcon
 A helper class is available that allows you to embed an SVG image from a sprite set file.
 
-This will require some yml config to set the source file. The file must live in your public/{resources} folder as this is currently used as a base
+This will require some yml config to set the source file. The file must live in your public/{resources folder CONST} folder as this is currently used as a base
 
 example yml config:
 
