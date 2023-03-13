@@ -43,7 +43,7 @@ Template usage:
 
     $SVGIcon($Icon, $tag, $title)
 
-    $SVGIcon($Icon = 'id-of-image-to-display' [tag=span], [title=false])
+    $SVGIcon($Icon = 'id-of-image-to-display' [tag=span](optional), [title=false](optional))
 
 Mark-up generated:
 
