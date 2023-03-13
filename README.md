@@ -27,6 +27,30 @@ This module adds a simple site email field to admin > settings. Access it via
 ## Global template helpers
 A simple class is included that provides a few basic reusable methods for templates. See the helpers dir for details.
 
+## SVGIcon
+A helper class is available that allows you to embed an SVG image from a sprite set file.
+
+This will require some yml config to set the source file. The file must live in your public/{resources} folder as this is currently used as a base
+
+example yml config:
+
+    pikselin\base\SVGIcon:
+      icon_file: themes/mytheme/dist/images/sprite.symbol.svg
+
+If this file doesnt exist then the template helper won't display anything.
+
+Template usage:
+
+    $SVGIcon($Icon = 'id-of-image-to-display' [tag=span], [title=false])
+
+Mark-up generated:
+
+    <$tag class="svg-icon svg-icon-$Icon">
+        <svg>($title) ? '<title>' . $title . '</title>
+              <use xlink:href="/_resources/{path to icon file}#$Icon"></use>
+	</svg>
+    </$tag>
+
 ## Image upload validator class
 Simple image upload validation for forms
 
