@@ -56,12 +56,13 @@ Mark-up generated:
 ### future considerations for the icon file
 
 Add more than one sprite source using yml configs, example:
-pikselin\base\SVGIcon:
-  image_files:
-    industry_icons:
-      icon_file: themes/mytheme/dist/images/industry.symbol.svg
-    navigation_icons:
-      icon_file: themes/mytheme/dist/images/navigation.symbol.svg
+
+    pikselin\base\SVGIcon:
+      image_files:
+        industry_icons:
+          icon_file: themes/mytheme/dist/images/industry.symbol.svg
+        navigation_icons:
+          icon_file: themes/mytheme/dist/images/navigation.symbol.svg
 
 then add an Icon using:
 
