@@ -2,9 +2,10 @@
 
 namespace pikselin\base;
 
-use SilverStripe\Core\Config\Configurable;
-use SilverStripe\View\TemplateGlobalProvider;
 use pikselin\base\SVGIcon;
+use SilverStripe\Core\Config\Configurable;
+use SilverStripe\View\ArrayData;
+use SilverStripe\View\TemplateGlobalProvider;
 
 /**
  * Template method provider to load an SVG asset from font awesome.
@@ -26,6 +27,10 @@ abstract class IconSvgProvider implements TemplateGlobalProvider {
         return [
             'SVGIcon' => [
                 'method' => 'getSvg',
+                'casting' => 'HTMLFragment',
+            ],
+            'SVGIconSet' => [
+                'method' => 'getSvgFromSet',
                 'casting' => 'HTMLFragment',
             ],
         ];
@@ -53,12 +58,43 @@ abstract class IconSvgProvider implements TemplateGlobalProvider {
         }
 
         $icon_file = (null !== $SVGIcon->config()->get('icon_file')) ? $SVGIcon->config()->get('icon_file') : false;
+        $image_files = (null !== $SVGIcon->config()->get('image_files')) ? $SVGIcon->config()->get('image_files') : false;
+        $arrayData = new ArrayData([
+            'wrapper' => $wrapper,
+            'Icon' => $Icon,
+            'title' => $title,
+            'icon_file' => $icon_file,
+            'resourcesDir' => RESOURCES_DIR
+        ]);
 
-        return '<' . $wrapper . ' class="svg-icon svg-icon-' . $Icon . '">
-		<svg>' . (($title) ? '<title>' . $title . '</title>' : '') .
-                '<use xlink:href="/_resources/' . $icon_file . '#' . $Icon . '"></use>
-		</svg>
-                </' . $wrapper . '>';
+        return $arrayData->renderWith('SVGIcon');
+    }
+
+    public static function getSvgFromSet($Set, $Icon, $wrapper = 'span', $title = FALSE) {
+        $SVGIcon = new SVGIcon();
+        $Icon = strtolower($Icon);
+        $Exists = $SVGIcon->iconExists($Icon);
+
+        // sanity check
+        if (!$Exists) {
+            return 'no icon';
+        }
+
+        if (!empty($title)) {
+            $title = htmlspecialchars($title);
+        }
+
+        $icon_file = (null !== $SVGIcon->config()->get('icon_file')) ? $SVGIcon->config()->get('icon_file') : false;
+        $image_files = (null !== $SVGIcon->config()->get('image_files')) ? $SVGIcon->config()->get('image_files') : false;
+        $arrayData = new ArrayData([
+            'wrapper' => $wrapper,
+            'Icon' => $Icon,
+            'title' => $title,
+            'icon_file' => $icon_file,
+            'resourcesDir' => RESOURCES_DIR
+        ]);
+
+        return $arrayData->renderWith('SVGIcon');
     }
 
 }
