@@ -7,19 +7,19 @@
 ## Included modules
 includes/requires the following modules
 
-- (silverstripe/cms)[https://github.com/silverstripe/silverstripe-cms]
-- (silverstripe/framework)[https://github.com/silverstripe/silverstripe-framework]
-- (innoweb/silverstripe-social-metadata)[https://github.com/xini/silverstripe-social-metadata]
-- (silverstripe/googlesitemaps)[https://github.com/wilr/silverstripe-googlesitemaps]
-- (gorriecoe/silverstripe-menu)[https://github.com/gorriecoe/silverstripe-menu]
-- (ryanpotter/silverstripe-cms-theme)[https://github.com/Rhym/silverstripe-cms-theme]
-- (dnadesign/silverstripe-elemental)[https://github.com/silverstripe/silverstripe-elemental]
-- (pikselin/silverstripe-admin-edit-link)[https://github.com/Pikselin/silverstripe-admin-edit-link]
-- (purplespider/asset-alt-text)[https://github.com/purplespider/silverstripe-asset-alt-text]
-- (silverstripe/sharedraftcontent)[https://github.com/silverstripe/silverstripe-sharedraftcontent]
-- (nzta/silverstripe-sitebanner)[https://github.com/silverstripe/silverstripe-sitebanner]
-- (silverstripe/environmentcheck)[https://github.com/silverstripe/silverstripe-environmentcheck]
-- (bringyourownideas/silverstripe-maintenance)[https://github.com/bringyourownideas/silverstripe-maintenance/blob/master/docs/en/userguide/index.md]
+- [silverstripe/cms](https://github.com/silverstripe/silverstripe-cms)
+- [silverstripe/framework](https://github.com/silverstripe/silverstripe-framework)
+- [innoweb/silverstripe-social-metadata](https://github.com/xini/silverstripe-social-metadata)
+- [silverstripe/googlesitemaps](https://github.com/wilr/silverstripe-googlesitemaps)
+- [gorriecoe/silverstripe-menu](https://github.com/gorriecoe/silverstripe-menu)
+- [ryanpotter/silverstripe-cms-theme](https://github.com/Rhym/silverstripe-cms-theme)
+- [dnadesign/silverstripe-elemental](https://github.com/silverstripe/silverstripe-elemental)
+- [pikselin/silverstripe-admin-edit-link](https://github.com/Pikselin/silverstripe-admin-edit-link)
+- [purplespider/asset-alt-text](https://github.com/purplespider/silverstripe-asset-alt-text)
+- [silverstripe/sharedraftcontent](https://github.com/silverstripe/silverstripe-sharedraftcontent)
+- [nzta/silverstripe-sitebanner](https://github.com/silverstripe/silverstripe-sitebanner)
+- [silverstripe/environmentcheck](https://github.com/silverstripe/silverstripe-environmentcheck)
+- [bringyourownideas/silverstripe-maintenance](https://github.com/bringyourownideas/silverstripe-maintenance/blob/master/docs/en/userguide/index.md)
 
 
 
