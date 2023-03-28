@@ -7,28 +7,19 @@
 ## Included modules
 includes/requires the following modules
 
-    innoweb/silverstripe-social-metadata
-    silverstripe/googlesitemaps
-    gorriecoe/silverstripe-menu
-    ryanpotter/silverstripe-cms-theme
-    dnadesign/silverstripe-elemental
-    pikselin/silverstripe-admin-edit-link
-    purplespider/asset-alt-text
-    silverstripe/sharedraftcontent
-
-        [https://github.com/silverstripe/silverstripe-cms](silverstripe/cms)
-        [https://github.com/silverstripe/silverstripe-framework](silverstripe/framework)
-        [https://github.com/xini/silverstripe-social-metadata](innoweb/silverstripe-social-metadata)
-        [https://github.com/wilr/silverstripe-googlesitemaps](silverstripe/googlesitemaps)
-        [https://github.com/gorriecoe/silverstripe-menu](gorriecoe/silverstripe-menu)
-        [https://github.com/Rhym/silverstripe-cms-theme](ryanpotter/silverstripe-cms-theme)
-        [https://github.com/silverstripe/silverstripe-elemental](dnadesign/silverstripe-elemental)
-        [https://github.com/Pikselin/silverstripe-admin-edit-link](pikselin/silverstripe-admin-edit-link)
-        [https://github.com/purplespider/silverstripe-asset-alt-text](purplespider/asset-alt-text)
-        [https://github.com/silverstripe/silverstripe-sharedraftcontent](silverstripe/sharedraftcontent)
-        [https://github.com/silverstripe/silverstripe-sitebanner](nzta/silverstripe-sitebanner)
-        [https://github.com/silverstripe/silverstripe-environmentcheck](silverstripe/environmentcheck)
-        [https://github.com/bringyourownideas/silverstripe-maintenance/blob/master/docs/en/userguide/index.md](bringyourownideas/silverstripe-maintenance)
+- (silverstripe/cms)[https://github.com/silverstripe/silverstripe-cms]
+- (silverstripe/framework)[https://github.com/silverstripe/silverstripe-framework]
+- (innoweb/silverstripe-social-metadata)[https://github.com/xini/silverstripe-social-metadata]
+- (silverstripe/googlesitemaps)[https://github.com/wilr/silverstripe-googlesitemaps]
+- (gorriecoe/silverstripe-menu)[https://github.com/gorriecoe/silverstripe-menu]
+- (ryanpotter/silverstripe-cms-theme)[https://github.com/Rhym/silverstripe-cms-theme]
+- (dnadesign/silverstripe-elemental)[https://github.com/silverstripe/silverstripe-elemental]
+- (pikselin/silverstripe-admin-edit-link)[https://github.com/Pikselin/silverstripe-admin-edit-link]
+- (purplespider/asset-alt-text)[https://github.com/purplespider/silverstripe-asset-alt-text]
+- (silverstripe/sharedraftcontent)[https://github.com/silverstripe/silverstripe-sharedraftcontent]
+- (nzta/silverstripe-sitebanner)[https://github.com/silverstripe/silverstripe-sitebanner]
+- (silverstripe/environmentcheck)[https://github.com/silverstripe/silverstripe-environmentcheck]
+- (bringyourownideas/silverstripe-maintenance)[https://github.com/bringyourownideas/silverstripe-maintenance/blob/master/docs/en/userguide/index.md]
 
 
 
