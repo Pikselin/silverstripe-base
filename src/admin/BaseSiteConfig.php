@@ -24,16 +24,6 @@ namespace Pikselin\base {
             $fields->addFieldToTab('Root.3rdPartyTools', TextField::create('TagManager', 'Google Tag Manager key'));
             $fields->addFieldToTab('Root.3rdPartyTools', TextField::create('GACode', 'Google Analytics key'));
 
-//            $fields->addFieldToTab('Root.3rdPartyTools', TextField::create('GoogleMapsAPIKey', 'Google Maps API Key (Javascript)')
-//                            ->setAttribute('placeholder', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
-//                            ->setDescription('Enter your Google Maps API Key here. obtain one from <a target="_blank" href="https://console.developers.google.com">Google developers console</a>. Create a browser javascript API key.')
-//            );
-//
-//            $fields->addFieldToTab('Root.3rdPartyTools', TextField::create('YouTubeAPIKey', 'YouTube API Key')
-//                            ->setAttribute('placeholder', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
-//                            ->setDescription('Enter your YouTube API Key here. obtain one from <a target="_blank" href="https://console.developers.google.com">Google developers console</a>.')
-//            );
-
             $themes = [];
             if (is_dir(THEMES_PATH)) {
                 foreach (scandir(THEMES_PATH) as $theme) {

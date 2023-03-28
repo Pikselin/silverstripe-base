@@ -51,16 +51,29 @@ This will require some yml config to set the source file. The file must live in 
 example yml config:
 
     pikselin\base\SVGIcon:
-      icon_file: themes/mytheme/dist/images/sprite.symbol.svg
+      icon_file: themes/pikselin/dist/images/sprite.icons.svg
+      image_files:
+        icons:
+          icon_file: themes/pikselin/dist/images/sprite.icons.svg
+        symbol:
+          icon_file: themes/pikselin/dist/images/sprite.symbol.svg
 
-If this file doesnt exist then the template helper won't display anything.
+If you only have a single sprite file then use `icon_file`. If you have multiple icon files then use the `image_files` array. 
+
+To access either config use the following template helpers
 
 Template usage:
 
     $SVGIcon($Icon, $tag, $title)
 
-    $SVGIcon($Icon = 'id-of-image-to-display' [tag=span](optional), [title=false](optional))
+    $SVGIcon('id-of-image-to-display' 'span'(optional), 'title' (optional))
 
+    $SVGIcon('arrow-back','span','here is my title single file title')
+
+Add the icon set key if pulling from the `image_files` array
+
+    $SVGIconSet('icons','arrow-back','span','here is my title')
+            
 Mark-up generated:
 
     <$tag class="svg-icon svg-icon-$Icon">
@@ -68,28 +81,6 @@ Mark-up generated:
               <use xlink:href="/_resources/{path to icon file}#$Icon"></use>
 	</svg>
     </$tag>
-
-### future considerations for the icon file
-
-Add more than one sprite source using yml configs, example:
-
-    pikselin\base\SVGIcon:
-      image_files:
-        industry_icons:
-          icon_file: themes/mytheme/dist/images/industry.symbol.svg
-        navigation_icons:
-          icon_file: themes/mytheme/dist/images/navigation.symbol.svg
-
-then add an Icon using:
-
-    $SVGIcon('industry_icons, 'industry-sheep, 'span', 'Sheep industry')
-
-Move mark-up to an include template that uses
-
-    $this->renderWith('SVGIcon');
-
-to allow theme lever overrides.
-
 
 ## Image upload validator class
 Simple image upload validation for forms
