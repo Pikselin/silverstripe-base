@@ -15,4 +15,4 @@ SilverStripe\Admin\LeftAndMain:
   extra_requirements_css:
     - /_resources/pikselin-base/client/css/admin.css  
 SilverStripe\SiteConfig\SiteConfig:
-  cms_logo: '_resources/vendor/pikselin/base/client/images/pikselin.jpeg'
+  cms_logo: '_resources/vendor/pikselin/base/client/images/pikselin.png'
