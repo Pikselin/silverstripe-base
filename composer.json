@@ -25,7 +25,9 @@
         "pikselin/silverstripe-admin-edit-link": "dev-main",
         "purplespider/asset-alt-text": "^1.1",
         "silverstripe/sharedraftcontent": "^2.8",        
-        "nzta/silverstripe-sitebanner": "^2.0"  
+        "nzta/silverstripe-sitebanner": "^2.0",
+        "silverstripe/environmentcheck": "^2.6",
+        "bringyourownideas/silverstripe-maintenance": "^2.6"
     },
     "config": {
         "process-timeout": 600
