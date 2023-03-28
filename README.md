@@ -5,7 +5,7 @@
 # features
 
 ## Included modules
-includes the following modules
+includes/requires the following modules
 
     innoweb/silverstripe-social-metadata
     silverstripe/googlesitemaps
@@ -15,6 +15,22 @@ includes the following modules
     pikselin/silverstripe-admin-edit-link
     purplespider/asset-alt-text
     silverstripe/sharedraftcontent
+
+        [https://github.com/silverstripe/silverstripe-cms](silverstripe/cms)
+        [https://github.com/silverstripe/silverstripe-framework](silverstripe/framework)
+        [https://github.com/xini/silverstripe-social-metadata](innoweb/silverstripe-social-metadata)
+        [https://github.com/wilr/silverstripe-googlesitemaps](silverstripe/googlesitemaps)
+        [https://github.com/gorriecoe/silverstripe-menu](gorriecoe/silverstripe-menu)
+        [https://github.com/Rhym/silverstripe-cms-theme](ryanpotter/silverstripe-cms-theme)
+        [https://github.com/silverstripe/silverstripe-elemental](dnadesign/silverstripe-elemental)
+        [https://github.com/Pikselin/silverstripe-admin-edit-link](pikselin/silverstripe-admin-edit-link)
+        [https://github.com/purplespider/silverstripe-asset-alt-text](purplespider/asset-alt-text)
+        [https://github.com/silverstripe/silverstripe-sharedraftcontent](silverstripe/sharedraftcontent)
+        [https://github.com/silverstripe/silverstripe-sitebanner](nzta/silverstripe-sitebanner)
+        [https://github.com/silverstripe/silverstripe-environmentcheck](silverstripe/environmentcheck)
+        [https://github.com/bringyourownideas/silverstripe-maintenance/blob/master/docs/en/userguide/index.md](bringyourownideas/silverstripe-maintenance)
+
+
 
 ## Override theme. 
 Base theme can be overridden from within admin > settings

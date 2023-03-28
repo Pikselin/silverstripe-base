@@ -58,7 +58,7 @@ abstract class IconSvgProvider implements TemplateGlobalProvider {
         }
 
         $icon_file = (null !== $SVGIcon->config()->get('icon_file')) ? $SVGIcon->config()->get('icon_file') : false;
-        $image_files = (null !== $SVGIcon->config()->get('image_files')) ? $SVGIcon->config()->get('image_files') : false;
+        //$image_files = (null !== $SVGIcon->config()->get('image_files')) ? $SVGIcon->config()->get('image_files') : false;
         $arrayData = new ArrayData([
             'wrapper' => $wrapper,
             'Icon' => $Icon,
@@ -73,7 +73,7 @@ abstract class IconSvgProvider implements TemplateGlobalProvider {
     public static function getSvgFromSet($Set, $Icon, $wrapper = 'span', $title = FALSE) {
         $SVGIcon = new SVGIcon();
         $Icon = strtolower($Icon);
-        $Exists = $SVGIcon->iconExists($Icon);
+        $Exists = $SVGIcon->iconExists($Icon,$Set);
 
         // sanity check
         if (!$Exists) {
@@ -84,13 +84,13 @@ abstract class IconSvgProvider implements TemplateGlobalProvider {
             $title = htmlspecialchars($title);
         }
 
-        $icon_file = (null !== $SVGIcon->config()->get('icon_file')) ? $SVGIcon->config()->get('icon_file') : false;
-        $image_files = (null !== $SVGIcon->config()->get('image_files')) ? $SVGIcon->config()->get('image_files') : false;
+        //$icon_file = (null !== $SVGIcon->config()->get('icon_file')) ? $SVGIcon->config()->get('icon_file') : false;
+        $icon_files = (null !== $SVGIcon->config()->get('image_files')) ? $SVGIcon->config()->get('image_files') : false;
         $arrayData = new ArrayData([
             'wrapper' => $wrapper,
             'Icon' => $Icon,
             'title' => $title,
-            'icon_file' => $icon_file,
+            'icon_file' => $icon_files[$Set]['icon_file'],
             'resourcesDir' => RESOURCES_DIR
         ]);
 

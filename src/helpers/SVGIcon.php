@@ -13,9 +13,25 @@ class SVGIcon {
      * Gets the available icons from our master SVG sprite
      *
      * @return array|string[]
+     * pikselin\base\SVGIcon:
+        icon_file: silverstripe-base/client/images/sprite.symbol.svg
+          image_files:
+            industry_icons:
+              icon_file: themes/mytheme/dist/images/industry.symbol.svg
+            navigation_icons:
+              icon_file: themes/mytheme/dist/images/navigation.symbol.svg
      */
-    public function getIconOptions() {
-        $icon_file = (null !== $this->config()->get('icon_file')) ? $this->config()->get('icon_file') : false;
+    public function getIconOptions($set = false) {
+        if ($set == false) {
+            $icon_file = (null !== $this->config()->get('icon_file')) ? $this->config()->get('icon_file') : false;    
+        } else {
+            // must have a set value
+            $icon_file_set = (null !== $SVGIcon->config()->get('image_files')) ? $SVGIcon->config()->get('image_files') : false;
+            if (isset($icon_file_set[$set])) {
+                $icon_file = $icon_file_set[$set]['icon_file'];
+            }
+        }
+        
         if ($icon_file !== false) {
             $svg_path = Director::baseFolder() . '/public/' . RESOURCES_DIR . '/' . $icon_file;
             // make sure it exists!
@@ -45,9 +61,9 @@ class SVGIcon {
      *
      * @return bool
      */
-    public function iconExists($icon) {
+    public function iconExists($icon, $set = false) {
         $icon = strtolower($icon);
-        $icons = $this->getIconOptions();
+        $icons = $this->getIconOptions($set);
         return (isset($icons[$icon]));
     }
 
