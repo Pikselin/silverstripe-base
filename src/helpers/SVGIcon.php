@@ -26,7 +26,7 @@ class SVGIcon {
             $icon_file = (null !== $this->config()->get('icon_file')) ? $this->config()->get('icon_file') : false;    
         } else {
             // must have a set value
-            $icon_file_set = (null !== $SVGIcon->config()->get('image_files')) ? $SVGIcon->config()->get('image_files') : false;
+            $icon_file_set = (null !== $this->config()->get('image_files')) ? $this->config()->get('image_files') : false;
             if (isset($icon_file_set[$set])) {
                 $icon_file = $icon_file_set[$set]['icon_file'];
             }
