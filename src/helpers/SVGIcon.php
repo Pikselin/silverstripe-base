@@ -31,7 +31,6 @@ class SVGIcon {
                 $icon_file = $icon_file_set[$set]['icon_file'];
             }
         }
-        
         if ($icon_file !== false) {
             $svg_path = Director::baseFolder() . '/public/' . RESOURCES_DIR . '/' . $icon_file;
             // make sure it exists!
