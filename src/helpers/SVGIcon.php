@@ -25,7 +25,6 @@ class SVGIcon {
         if ($set == false) {
             $icon_file = (null !== $this->config()->get('icon_file')) ? $this->config()->get('icon_file') : false;    
         } else {
-            // must have a set value
             $icon_file_set = (null !== $this->config()->get('image_files')) ? $this->config()->get('image_files') : false;
             if (isset($icon_file_set[$set])) {
                 $icon_file = $icon_file_set[$set]['icon_file'];
@@ -33,7 +32,6 @@ class SVGIcon {
         }
         if ($icon_file !== false) {
             $svg_path = Director::baseFolder() . '/public/' . RESOURCES_DIR . '/' . $icon_file;
-            // make sure it exists!
             if (file_exists($svg_path)) {
                 $content = file_get_contents($svg_path);
                 preg_match_all('/id="([\w|-]*)"/', $content, $output_array);
@@ -41,9 +39,7 @@ class SVGIcon {
                     $arrIcons = $output_array[1];
                     $return = [];
                     foreach ($arrIcons as $icon) {
-                        //if (strpos($icon, 'industry',0) !== false|| $includeAll == true) {
                         $return[$icon] = $icon;
-                        //}
                     }
                     return $return;
                 }

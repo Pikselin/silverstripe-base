@@ -17,7 +17,7 @@
     "require": {
         "silverstripe/cms": "^4",
         "silverstripe/framework": "^4",
-        "innoweb/silverstripe-social-metadata": "dev-master",
+        "innoweb/silverstripe-social-metadata": "7.2.0",
         "silverstripe/googlesitemaps": "^2.2",
         "gorriecoe/silverstripe-menu": "^2.0",
         "ryanpotter/silverstripe-cms-theme": "^3.4",
