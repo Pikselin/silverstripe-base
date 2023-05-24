@@ -1,5 +1,6 @@
 ---
 Name: pikselin-base-headers
+before: '*'
 ---
 SilverStripe\CMS\Model\SiteTree:
   extensions:
