@@ -9,4 +9,7 @@ SilverStripe\CMS\Model\SiteTree:
 SilverStripe\CMS\Controllers\ContentController:
   extensions:
     - Pikselin\base\BaseContentController
+#    - Pikselin\base\SecurityPolicyController
+SilverStripe\CMS\Controllers\ContentController\PageController:
+  extensions:
     - Pikselin\base\SecurityPolicyController
