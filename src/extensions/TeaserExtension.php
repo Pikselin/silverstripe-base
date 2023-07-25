@@ -26,7 +26,7 @@ class TeaserExtension extends DataExtension
     public function updateCMSFields(FieldList $fields)
     {
 
-        $TeaserLead = LiteralField::create('TeaserLead', '<p>Add text and an image that will be used when this page is displayed in a teaser context such as when being listed as a sub page or used in featured block.</p>');
+        $TeaserLead = LiteralField::create('TeaserLead', '<p>Add text and an image that will be used when this page is displayed in a teaser context such as when being listed as a sub page or used in a featured block.</p>');
 
         $TeaserText = HTMLEditorField::create('TeaserText', 'Teaser Text')->setRows(5);
 
