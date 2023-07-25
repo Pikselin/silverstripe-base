@@ -27,7 +27,8 @@
         "silverstripe/sharedraftcontent": "^2.8",
         "nzta/silverstripe-sitebanner": "^2.0",
         "silverstripe/environmentcheck": "^2.6",
-        "bringyourownideas/silverstripe-maintenance": "^2.6"
+        "bringyourownideas/silverstripe-maintenance": "^2.6",
+        "jonom/focuspoint": "^4"
     },
     "config": {
         "process-timeout": 600
