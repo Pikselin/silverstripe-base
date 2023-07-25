@@ -22,13 +22,13 @@
         "gorriecoe/silverstripe-menu": "^2.0",
         "ryanpotter/silverstripe-cms-theme": "^3.4",
         "dnadesign/silverstripe-elemental": "^4",
-        "jonom/silverstripe-betternavigator": "^5.4",
         "purplespider/asset-alt-text": "^1.1",
         "silverstripe/sharedraftcontent": "^2.8",
         "nzta/silverstripe-sitebanner": "^2.0",
         "silverstripe/environmentcheck": "^2.6",
         "bringyourownideas/silverstripe-maintenance": "^2.6",
-        "jonom/focuspoint": "^4"
+        "jonom/focuspoint": "^4",
+        "jonom/silverstripe-betternavigator": "^5.4"
     },
     "config": {
         "process-timeout": 600

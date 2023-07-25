@@ -14,14 +14,12 @@ includes/requires the following modules
 - [gorriecoe/silverstripe-menu](https://github.com/gorriecoe/silverstripe-menu)
 - [ryanpotter/silverstripe-cms-theme](https://github.com/Rhym/silverstripe-cms-theme)
 - [dnadesign/silverstripe-elemental](https://github.com/silverstripe/silverstripe-elemental)
-- [pikselin/silverstripe-admin-edit-link](https://github.com/Pikselin/silverstripe-admin-edit-link)
 - [purplespider/asset-alt-text](https://github.com/purplespider/silverstripe-asset-alt-text)
 - [silverstripe/sharedraftcontent](https://github.com/silverstripe/silverstripe-sharedraftcontent)
-- [nzta/silverstripe-sitebanner](https://github.com/silverstripe/silverstripe-sitebanner)
 - [silverstripe/environmentcheck](https://github.com/silverstripe/silverstripe-environmentcheck)
 - [bringyourownideas/silverstripe-maintenance](https://github.com/bringyourownideas/silverstripe-maintenance/blob/master/docs/en/userguide/index.md)
-
-
+- [jonom/focuspoint](https://github.com/jonom/silverstripe-focuspoint)
+- [jonom/silverstripe-betternavigator](https://github.com/jonom/silverstripe-betternavigator)
 
 ## Override theme. 
 Base theme can be overridden from within admin > settings
@@ -33,6 +31,24 @@ This module adds a simple site email field to admin > settings. Access it via
 
 ## Global template helpers
 A simple class is included that provides a few basic reusable methods for templates. See the helpers dir for details.
+
+## Teaser extension
+An extension is included that allows you to add teaser text and teaser image fields to any page type. This is useful when you want to display child pages in lists on landing pages etc.
+To activate the extension add it via the extensions static
+
+    private static $extensions = [
+            TeaserExtension::class
+        ];
+
+Or in yml
+
+    Page:
+      extensions:
+        - Pikselin\base\TeaserExtension
+
+Full namespace for this extension
+
+    namespace Pikselin\base\TeaserExtension;
 
 ## SVGIcon
 A helper class is available that allows you to embed an SVG image from a sprite set file.
@@ -86,6 +102,9 @@ example:
     $Image->setValidator($validator);
 
 ## CSP
+### Note
+**Consider replacing this with Simon's CSP module**
+
 Nonce value can get accessed via the page global $StoredNonce. Useful for all inline scripts.
 
 You can also create CSP and general site headers using this module. No headers are provided by default (yet)
