@@ -105,6 +105,8 @@ example:
 ### Note
 **Consider replacing this with Simon's CSP module**
 
+[Firesphere/silverstripe-csp-headers](https://github.com/Firesphere/silverstripe-csp-headers)
+
 Nonce value can get accessed via the page global $StoredNonce. Useful for all inline scripts.
 
 You can also create CSP and general site headers using this module. No headers are provided by default (yet)
