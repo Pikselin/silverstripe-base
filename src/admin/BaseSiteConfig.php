@@ -29,7 +29,7 @@ namespace Pikselin\base {
 
 
             $ThemeField = DropdownField::create('OverrideTheme', 'Override theme', \BaseHelpers::ThemeList())->setDescription('Override the default theme for this site.')->setEmptyString('(Choose a theme)');
-            $ThemeFieldDesc = LiteralField::create('ThemeFieldDesc', 'You can set the sites global theme here to override the one hard coded into the sites configuration. Note that you can also override the theme on a page by page basis. This can be controlled via the "Theme" tab on each page. Page level themes are inherited from page parents so if you have a page structure of root > about us > my page and set a theme on "about us" then "my page" will use the theme set on "about us"');
+            $ThemeFieldDesc = LiteralField::create('ThemeFieldDesc', file_get_contents(dirname(__FILE__, 3)).'/files/theme-help.html');
             $fields->addFieldToTab('Root.Theme', $ThemeField);
             $fields->addFieldToTab('Root.Theme', $ThemeFieldDesc);
         }
