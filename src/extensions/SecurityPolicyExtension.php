@@ -4,10 +4,10 @@ namespace Pikselin\base {
 
 use SilverStripe\ORM\DataExtension;
 
-    class SecurityPolicyExtension extends DataExtension {
-
-
-        protected function getNonce(int $length = 16): string {
+    class SecurityPolicyExtension extends DataExtension
+    {
+        protected function getNonce(int $length = 16): string
+        {
             $string = '';
 
             while (($len = strlen($string)) < $length) {
@@ -27,7 +27,8 @@ use SilverStripe\ORM\DataExtension;
          *
          * @return string|null
          */
-        public function StoredNonce() {
+        public function StoredNonce()
+        {
             static $nonce = null;
 
             if ($nonce === null) {
@@ -35,7 +36,6 @@ use SilverStripe\ORM\DataExtension;
             }
             return $nonce;
         }
-
     }
 
 }
