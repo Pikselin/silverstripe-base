@@ -10,6 +10,9 @@ namespace Pikselin\base {
     {
         public function onBeforeInit()
         {
+
+            // Check global settings override
+
             // check current page for override theme
             if (!empty($this->owner->Theme)) {
                 SSViewer::set_themes([$this->owner->Theme, SSViewer::DEFAULT_THEME]);
@@ -17,13 +20,14 @@ namespace Pikselin\base {
             }
 
             // recurse up the page tree
+//            echo 'closest theme: ' . $this->owner->ClosestTheme($this->owner->Parent());
+//            exit();
             $ClosetTheme = $this->owner->ClosestTheme($this->owner->Parent());
             if (!empty($ClosetTheme)) {
                 SSViewer::set_themes([$ClosetTheme, SSViewer::DEFAULT_THEME]);
                 return;
             }
 
-            // Check global settings override
             $SiteConfig = SiteConfig::current_site_config();
             if (!empty($SiteConfig->OverrideTheme)) {
                 SSViewer::set_themes([$SiteConfig->OverrideTheme, SSViewer::DEFAULT_THEME]);
@@ -31,8 +35,13 @@ namespace Pikselin\base {
             }
         }
 
-        public function ClosestTheme($page = false): string
+        public function ClosestTheme($page = false)
         {
+
+            if(isset($page->ID) && $page->ID <= 0 ) {
+                return;
+            }
+
             if ($page === false) {
                 $page = $this->owner;
             }

@@ -29,9 +29,9 @@ namespace Pikselin\base {
 
 
             $ThemeField = DropdownField::create('OverrideTheme', 'Override theme', \BaseHelpers::ThemeList())->setDescription('Override the default theme for this site.')->setEmptyString('(Choose a theme)');
-            $ThemeFieldDesc = LiteralField::create('ThemeFieldDesc', file_get_contents(dirname(__FILE__, 3)).'/files/theme-help.html');
+            //$ThemeFieldDesc = LiteralField::create('ThemeFieldDesc', file_get_contents(dirname(__FILE__, 3)).'/files/theme-help.html');
             $fields->addFieldToTab('Root.Theme', $ThemeField);
-            $fields->addFieldToTab('Root.Theme', $ThemeFieldDesc);
+            //$fields->addFieldToTab('Root.Theme', $ThemeFieldDesc);
         }
     }
 
