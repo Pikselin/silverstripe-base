@@ -11,12 +11,12 @@ use SilverStripe\View\ArrayData;
 class BaseSiteTreeExtension extends DataExtension
 {
     private static array $db = [
-        'Theme' => 'Text'
+        'PB_Theme' => 'Text'
     ];
 
     public function updateCMSFields(FieldList $fields)
     {
-        $ThemeField = DropdownField::create('Theme', 'Override theme', \BaseHelpers::ThemeList())
+        $ThemeField = DropdownField::create('PB_Theme', 'Override theme', \BaseHelpers::ThemeList())
             ->setDescription('Override the default theme for this site.')->setEmptyString('Default theme');
 
         $fields->addFieldToTab('Root.Theme', $ThemeField);
