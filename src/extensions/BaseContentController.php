@@ -10,31 +10,36 @@ namespace Pikselin\base {
     {
         public function onBeforeInit()
         {
-            // check current page for override theme
-            if (!empty($this->owner->PB_Theme)) {
-                SSViewer::set_themes([$this->owner->PB_Theme, SSViewer::DEFAULT_THEME]);
-                return;
-            }
-
-            $ClosetTheme = $this->owner->ClosestTheme($this->owner->Parent());
-            if (!empty($ClosetTheme)) {
-                SSViewer::set_themes([$ClosetTheme, SSViewer::DEFAULT_THEME]);
-                return;
-            }
 
             // Check global settings override
-            $SiteConfig = SiteConfig::current_site_config();
-            if (!empty($SiteConfig->PB_OverrideTheme)) {
-                SSViewer::set_themes([$SiteConfig->PB_OverrideTheme, SSViewer::DEFAULT_THEME]);
-                return;
-            }
+
+            // check current page for override theme
+//            if (!empty($this->owner->Theme)) {
+//                SSViewer::set_themes([$this->owner->Theme, SSViewer::DEFAULT_THEME]);
+//                return;
+//            }
+//
+//            // recurse up the page tree
+////            echo 'closest theme: ' . $this->owner->ClosestTheme($this->owner->Parent());
+////            exit();
+//            $ClosetTheme = $this->owner->ClosestTheme($this->owner->Parent());
+//            if (!empty($ClosetTheme)) {
+//                SSViewer::set_themes([$ClosetTheme, SSViewer::DEFAULT_THEME]);
+//                return;
+//            }
+//
+//            $SiteConfig = SiteConfig::current_site_config();
+//            if (!empty($SiteConfig->OverrideTheme)) {
+//                SSViewer::set_themes([$SiteConfig->OverrideTheme, SSViewer::DEFAULT_THEME]);
+//                return;
+//            }
         }
 
         public function ClosestTheme($page = false)
         {
 
             if(isset($page->ID) && $page->ID <= 0 ) {
-                return false;
+                return;
             }
 
             if ($page === false) {
