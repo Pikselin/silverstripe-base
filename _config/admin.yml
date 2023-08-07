@@ -13,6 +13,6 @@ SilverStripe\Admin\LeftAndMain:
   cms_drawer_color: currentColor
   cms_icon_color: currentColor
   extra_requirements_css:
-    - /_resources/pikselin-base/client/css/admin.css  
+    - /_resources/pikselin-base/client/css/admin.css
 SilverStripe\SiteConfig\SiteConfig:
-  cms_logo: '_resources/pikselin-base/client/images/pikselin.png'
+  cms_logo: '_resources/venodr/pikselin/base/client/images/pikselin.png'
