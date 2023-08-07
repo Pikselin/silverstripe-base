@@ -22,6 +22,12 @@ namespace Pikselin\base {
 
         public function updateCMSFields(FieldList $fields)
         {
+            // clear fields incase another module has set them in config
+            $fields->removeByName('TagManager');
+            $fields->removeByName('GACode');
+            $fields->removeByName('GoogleMapsAPIKey');
+            $fields->removeByName('YouTubeAPIKey');
+
             $fields->addFieldToTab('Root.Main', EmailField::create('SiteEmail', 'General Email address'));
             $APIKeysLead = LiteralField::create('APIKeysLead','<p>Some features will require API keys in order to access functions such as website tracking or video embedding. Enter API keys below for the features required by this site.</p>');
             $fields->addFieldToTab('Root.3rdPartyTools', $APIKeysLead);

@@ -1,6 +1,14 @@
+---
+Name: pikselin-site-config
+After: '*'
+---
 Silverstripe\SiteConfig\SiteConfig:
   extensions:
     - Pikselin\base\BaseSiteConfig
+---
+Name: pikselin-base-admin-config
+After: '*'
+---
 SilverStripe\Admin\LeftAndMain:
   cms_background: '#D5141B'
   cms_border_color: '#ffffff'
