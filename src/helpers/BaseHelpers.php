@@ -37,6 +37,13 @@ class BaseHelpers implements TemplateGlobalProvider
         return (($h > 0) ? $h.' hours ' : '').($m > 0 ? $m.' mins' : '');
     }
 
+    public static function json_validator($data) : bool {
+    if (!empty($data)) {
+        return is_string($data) && is_array(json_decode($data, true));
+    }
+    return false;
+}
+
     public static function ThemeList(): array
     {
         $themes = [];
