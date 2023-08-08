@@ -17,7 +17,6 @@
     "require": {
         "silverstripe/cms": "^4",
         "silverstripe/framework": "^4",
-        "innoweb/silverstripe-social-metadata": "7.2.0",
         "gorriecoe/silverstripe-menu": "^2.0",
         "purplespider/asset-alt-text": "^1.1",
         "nzta/silverstripe-sitebanner": "^2.0",
