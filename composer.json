@@ -19,7 +19,6 @@
         "silverstripe/framework": "^4",
         "gorriecoe/silverstripe-menu": "^2.0",
         "purplespider/asset-alt-text": "^1.1",
-        "nzta/silverstripe-sitebanner": "^2.0",
         "jonom/silverstripe-betternavigator": "^5.4",
         "dnadesign/silverstripe-elemental": "^4|^5",
         "silverstripe/sharedraftcontent": "^2.8|^3",
@@ -71,7 +70,6 @@
         "ilateral/silverstripe-modern": "^1.5",
         "dynamic/silverstripe-elemental-embedded-code": "^2.1",
         "undefinedoffset/sortablegridfield": "^2.2",
-        "nomidi/silverstripe-seo-hero-tool-analysis": "dev-master",
         "quinninteractive/silverstripe-seo": "^1.1",
         "silverstripe/crontask": "^2.6",
         "pikselin/silverstripe-pagebanners": "dev-main"
