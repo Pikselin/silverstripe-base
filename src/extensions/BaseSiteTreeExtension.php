@@ -17,7 +17,7 @@ class BaseSiteTreeExtension extends DataExtension
     public function updateCMSFields(FieldList $fields)
     {
         $ThemeField = DropdownField::create('PB_Theme', 'Override theme', \BaseHelpers::ThemeList())
-            ->setDescription('Override the default theme for this site.')->setEmptyString('Default theme');
+            ->setDescription('Override the default sites theme for this page.')->setEmptyString('Default theme');
 
         $fields->addFieldToTab('Root.Theme', $ThemeField);
     }

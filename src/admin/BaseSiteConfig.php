@@ -22,7 +22,8 @@ namespace Pikselin\base {
 
         public function updateCMSFields(FieldList $fields)
         {
-            // clear fields incase another module has set them in config
+            // clear fields in case another module has set them in config
+            $fields->removeByName('Tagline');
             $fields->removeByName('TagManager');
             $fields->removeByName('GACode');
             $fields->removeByName('GoogleMapsAPIKey');
@@ -40,8 +41,8 @@ namespace Pikselin\base {
 
             $ThemeField = DropdownField::create('PB_OverrideTheme', 'Override theme', \BaseHelpers::ThemeList())->setDescription('Override the default theme for this site.')->setEmptyString('(Choose a theme)');
             $ThemeFieldDesc = LiteralField::create('ThemeFieldDesc', file_get_contents(dirname(__FILE__, 3).'/files/theme-help.html'));
-            $fields->addFieldToTab('Root.Theme', $ThemeField);
-            $fields->addFieldToTab('Root.Theme', $ThemeFieldDesc);
+            $fields->addFieldToTab('Root.Main', $ThemeField);
+            $fields->addFieldToTab('Root.Main', $ThemeFieldDesc);
         }
     }
 
