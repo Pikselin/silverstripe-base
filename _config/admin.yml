@@ -22,5 +22,8 @@ SilverStripe\Admin\LeftAndMain:
   cms_icon_color: currentColor
   extra_requirements_css:
     - /_resources/pikselin-base/client/css/admin.css
+---
+Name: Pikselin-base-theme
+---
 SilverStripe\SiteConfig\SiteConfig:
   cms_logo: '_resources/vendor/pikselin/base/client/images/pikselin.png'

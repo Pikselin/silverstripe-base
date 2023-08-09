@@ -2,159 +2,77 @@
 
     composer require Pikselin/base
 
-# features
+*This module will start to use tagging from the first release. Tag numbers will match the Silverstripe release version, for example, for Silverstripe 4, the tag format will be 4.x.x*
+
+# Features
 
 ## Included modules
 includes/requires the following modules
 
-- [silverstripe/cms](https://github.com/silverstripe/silverstripe-cms)
-- [silverstripe/framework](https://github.com/silverstripe/silverstripe-framework)
-- [innoweb/silverstripe-social-metadata](https://github.com/xini/silverstripe-social-metadata)
-- [silverstripe/googlesitemaps](https://github.com/wilr/silverstripe-googlesitemaps)
-- [gorriecoe/silverstripe-menu](https://github.com/gorriecoe/silverstripe-menu)
-- [ryanpotter/silverstripe-cms-theme](https://github.com/Rhym/silverstripe-cms-theme)
-- [dnadesign/silverstripe-elemental](https://github.com/silverstripe/silverstripe-elemental)
-- [purplespider/asset-alt-text](https://github.com/purplespider/silverstripe-asset-alt-text)
-- [silverstripe/sharedraftcontent](https://github.com/silverstripe/silverstripe-sharedraftcontent)
-- [silverstripe/environmentcheck](https://github.com/silverstripe/silverstripe-environmentcheck)
-- [bringyourownideas/silverstripe-maintenance](https://github.com/bringyourownideas/silverstripe-maintenance/blob/master/docs/en/userguide/index.md)
-- [jonom/focuspoint](https://github.com/jonom/silverstripe-focuspoint)
-- [jonom/silverstripe-betternavigator](https://github.com/jonom/silverstripe-betternavigator)
+See the composer.json file for the full list of included modules. Some initial set-up documentation will is include here to expose what new features this module makes available.
 
-## Override theme. 
-Base theme can be overridden from within admin > settings
+# Table of contents
 
-## Site email
-This module adds a simple site email field to admin > settings. Access it via
+- [Global config](docs/globalconfig.md) *Site config fields*
+- [Extensions](docs/extensions.md) *Content teaser and upload validator*
+- [Security Policy headers](docs/csp.md) *CSP set-up*
+- [Global template helpers](docs/helpers.md) *General template and code helpers*
+- [Elemental](docs/elemental.md) *Content management objects*
+- [Images](docs/images.md) *Image management and manipulation*
+- [Additional CMS fields](docs/fields.md) *New field types*
+- [Development](docs/development.md) *Developer tools*
+- [Forms](docs/forms.md) *Extending form functionality*
+- [Page banners](docs/pagebanners.md) *Page and site level alerts*
 
-    $SiteConfig.SiteEmail
+## Passive extensions
 
-## Global template helpers
-A simple class is included that provides a few basic reusable methods for templates. See the helpers dir for details.
+A number of code classes and extensions exist that support the functionality mentioned below. These are in the [extensions](../extensions/). These extensions initialise features mentioned in this document.
 
-## Teaser extension
-An extension is included that allows you to add teaser text and teaser image fields to any page type. This is useful when you want to display child pages in lists on landing pages etc.
-To activate the extension add it via the extensions static
+## Themes
 
-    private static $extensions = [
-            TeaserExtension::class
-        ];
+A Bootstrap based theme is included with this module.
 
-Or in yml
+**Do not delete me yet**
+```yaml
 
-    Page:
-      extensions:
-        - Pikselin\base\TeaserExtension
+"jonom/silverstripe-betternavigator": "^5.4",
+"silverstripe/sharedraftcontent": "^2.8|^3",
+"ryanpotter/silverstripe-cms-theme": "dev-master#44a15b6a071bd36c57d0a72ecb0e3d141e5a86d0",
+"silverstripe/redirectedurls": "^2.2",
+"symbiote/silverstripe-advancedworkflow": "^5.9",
+"symbiote/silverstripe-multivaluefield": "^5.4",
+"gorriecoe/silverstripe-link": "^1.4",
 
-Full namespace for this extension
+"innoweb/silverstripe-page-icons": "^2.4",
+"silverstripe/docstation": "dev-main#a8b42061437a972a8f311fb8a8fcd53d4dde092b",
+"silverstripe/taxonomy": "^2.5|^3",
+"axllent/silverstripe-email-obfuscator": "^2.1",
+"silverstripe/mimevalidator": "^2.5",
 
-    namespace Pikselin\base\TeaserExtension;
-
-## SVGIcon
-A helper class is available that allows you to embed an SVG image from a sprite set file.
-
-This will require some yml config to set the source file. The file must live in your public/{resources folder CONST} folder as this is currently used as a base
-
-example yml config:
-
-    pikselin\base\SVGIcon:
-      icon_file: themes/pikselin/dist/images/sprite.icons.svg
-      image_files:
-        icons:
-          icon_file: themes/pikselin/dist/images/sprite.icons.svg
-        symbol:
-          icon_file: themes/pikselin/dist/images/sprite.symbol.svg
-
-If you only have a single sprite file then use `icon_file`. If you have multiple icon files then use the `image_files` array. 
-
-To access either config use the following template helpers
-
-Template usage:
-
-    $SVGIcon($Icon, $tag, $title)
-
-    $SVGIcon('id-of-image-to-display' 'span'(optional), 'title' (optional))
-
-    $SVGIcon('arrow-back','span','here is my title single file title')
-
-Add the icon set key if pulling from the `image_files` array
-
-    $SVGIconSet('icons','arrow-back','span','here is my title')
-            
-Mark-up generated:
-
-    <$tag class="svg-icon svg-icon-$Icon">
-        <svg>($title) ? '<title>' . $title . '</title>
-              <use xlink:href="/_resources/{path to icon file}#$Icon"></use>
-	</svg>
-    </$tag>
-
-## Image upload validator class
-Simple image upload validation for forms
-
-example:
-
-    $Image = new UploadField('Image', 'Image');
-    $Image->setDescription('');
-    $validator = new ImageUpload_Validator();
-    $validator->setMinDimensions(500, 400);
-    $validator->setAllowedExtensions(array('jpg', 'jpeg', 'png'));
-    $Image->setValidator($validator);
-
-## CSP
-### Note
-**Consider replacing this with Simon's CSP module**
-
-Nonce value can get accessed via the page global $StoredNonce. Useful for all inline scripts.
-
-You can also create CSP and general site headers using this module. No headers are provided by default (yet)
-
-Just create a yml config like the following:
-
-    _config/SecurityPolicy.yml
-
-    Pikselin\base\SecurityPolicyController:
-    #  use_nonce: false
-    #  csp_type: Content-Security-Policy
-    #  csp_type: false /* setting to false disables CSP header inclusion but won't disable standard headers*/
-    #  possible options [Content-Security-Policy, Content-Security-Policy-Report-Only, false]
-    #  https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
-      headers:
-        X-Frame-Options: SAMEORIGIN
-        Referrer-Policy: same-origin
-        X-Content-Type-Options: nosniff
-        Permissions-Policy: "camera=(), cross-origin-isolated=*, fullscreen=(*)"
-        Strict-Transport-Security: "max-age=31536000; includeSubDomains"
-        X-Powered-By: "xxx"
-        Access-Control-Allow-Origin: "*"
-      csp_headers:
-        default-src:
-          - "'self'"
-          - "data:"
-          - unsafe-inline
-          - unsafe-eval      
-          - '*.googleapis.com'
-          - '*.hotjar.com'
-          - '*.youtube.com'
-          - 'googleads.g.doubleclick.net'
-          - '*.monsido.com'
-        script-src:
-          - "'self'"
-          - "data:"
-          - unsafe-inline
-          - unsafe-eval    
+"silverstripe/textextraction": "^3.5",
+"silverstripe/spellcheck": "^2.5",
+"lekoala/silverstripe-cms-actions": "^1.4",
+"silverstripe/contentreview": "^4.7",
 
 
-[Information on how to generate CSP headers](https://report-uri.com/home/generate)
 
-##
-Tag manager and GA4. Just add the account ID for one of these to have them included
+"quinninteractive/silverstripe-seo": "^1.1",
 
-### Google analytics
+"silverstripe/googlesitemaps": "^2.2|^3",
+"tractorcow/silverstripe-robots": "^4.0",
+"colymba/gridfield-bulk-editing-tools": "^3.1",
+"symbiote/silverstripe-gridfieldextensions": "^3.6",
+"undefinedoffset/sortablegridfield": "^2.2",
+"tractorcow/silverstripe-fluent": "^6.0",
+"silverstripe/crontask": "^2.6",
 
-    <% if $GACode %>$GACode<% end_if %>
 
-#### Tag manager
+"silverstripe/mfa": "^4.8",
 
-    <% if $TagManagerNoScript %>$TagManagerNoScript<% end_if %>
-    <% if $TagManagerCode %>$TagManagerCode<% end_if %>
+
+
+"ilateral/silverstripe-modern": "^1.5",
+
+"pikselin/silverstripe-pagebanners": "dev-main"
+
+```
