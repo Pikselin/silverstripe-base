@@ -1,5 +1,5 @@
 {
-    "name": "pikselin/base",
+    "name": "pikselin/silverstripe-base",
     "type": "silverstripe-vendormodule",
     "description": "Add core config and options",
     "keywords": [
@@ -20,13 +20,11 @@
         "gorriecoe/silverstripe-menu": "^2.0",
         "purplespider/asset-alt-text": "^1.1",
         "jonom/silverstripe-betternavigator": "^5.4",
-        "dnadesign/silverstripe-elemental": "^4|^5",
         "silverstripe/sharedraftcontent": "^2.8|^3",
         "silverstripe/environmentcheck": "^2.6|^3",
         "jonom/silverstripe-environment-awareness": "dev-master#bbf6f3884dc563e54d16bed20c03c9496ccb8e76",
         "ryanpotter/silverstripe-cms-theme": "dev-master#44a15b6a071bd36c57d0a72ecb0e3d141e5a86d0",
         "heyday/silverstripe-responsive-images": "^2.0",
-        "silverstripers/elemental-search": "dev-master",
         "silverstripe/redirectedurls": "^2.2",
         "symbiote/silverstripe-advancedworkflow": "^5.9",
         "symbiote/silverstripe-multivaluefield": "^5.4",
@@ -40,13 +38,11 @@
         "silverstripe/googlesitemaps": "^2.2|^3",
         "innoweb/silverstripe-page-icons": "^2.4",
         "silverstripe/docstation": "dev-main#a8b42061437a972a8f311fb8a8fcd53d4dde092b",
-        "dnadesign/silverstripe-elemental-virtual": "1.x-dev|^2",
         "silverstripe/taxonomy": "^2.5|^3",
         "stevie-mayhew/silverstripe-svg": "^2.2",
         "symbiote/silverstripe-gridfieldextensions": "^3.6",
         "jonom/focuspoint": "^4.0",
         "axllent/silverstripe-email-obfuscator": "^2.1",
-        "dnadesign/silverstripe-elemental-userforms": "^3.3",
         "axllent/silverstripe-bootstrap-forms": "dev-master",
         "undefinedoffset/silverstripe-nocaptcha": "^2.4",
         "silverstripe/mimevalidator": "^2.5",
@@ -65,15 +61,19 @@
         "axllent/silverstripe-form-fields": "^1.6",
         "heyday/silverstripe-hashpath": "^3.0",
         "silverware/calendar": "^1.1",
-        "fractas/elemental-stylings": "^1.0@RC",
         "tractorcow/silverstripe-colorpicker": "^4@dev",
         "ilateral/silverstripe-modern": "^1.5",
-        "dynamic/silverstripe-elemental-embedded-code": "^2.1",
         "undefinedoffset/sortablegridfield": "^2.2",
         "quinninteractive/silverstripe-seo": "^1.1",
         "silverstripe/crontask": "^2.6",
         "pikselin/silverstripe-pagebanners": "dev-main"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:pikselin/silverstripe-elemental"
+        }
+    ],
     "require-dev": {
         "dnadesign/silverstripe-populate": "^2.2"
     },

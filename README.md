@@ -1,6 +1,8 @@
-# Installation
+# ![Pikselin https://pikselin.net](https://avatars.githubusercontent.com/u/106634444?s=48&v=4) Silverstripe base
 
-    composer require Pikselin/base
+## Installation
+
+    composer require pikselin/base
 
 *This module will start to use tagging from the first release. Tag numbers will match the Silverstripe release version, for example, for Silverstripe 4, the tag format will be 4.x.x*
 
