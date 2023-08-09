@@ -19,10 +19,11 @@ See the composer.json file for the full list of included modules. Some initial s
 - [Global template helpers](docs/helpers.md) *General template and code helpers*
 - [Elemental](docs/elemental.md) *Content management objects*
 - [Images](docs/images.md) *Image management and manipulation*
+- [SVGs](docs/svg.md) *SVG helper functions*
 - [Additional CMS fields](docs/fields.md) *New field types*
 - [Development](docs/development.md) *Developer tools*
 - [Forms](docs/forms.md) *Extending form functionality*
-- [Page banners](docs/pagebanners.md) *Page and site level alerts*
+- [Page banners](https://github.com/Pikselin/silverstripe-pagebanners) *Page and site level alerts*
 
 ## Passive extensions
 

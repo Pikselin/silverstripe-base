@@ -4,12 +4,15 @@
 An extension is included that allows you to add teaser text and teaser image fields to any page type. This is useful when you want to display child pages in lists on landing pages with a specific image and lead text.
 
 To activate the extension add it via the extensions static:
+
 ```php
     private static $extensions = [
             TeaserExtension::class
         ];
 ```
 Or in yml
+
+**app/_config/extensions.yml**
 
 ```yaml
     Page:
