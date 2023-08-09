@@ -5,10 +5,10 @@ A simple class is included that provides a few basic reusable static methods for
 Helpers can be accessed in templates by calling the method name:
 
 ```html
-    $CurrentYear
+ß$CurrentYear
 ```
 Or in code:
 ```php
-    BaseHelpers::CurrentYear();
+BaseHelpers::CurrentYear();
 ```
 See [BaseHelpers.php](../src/helpers/BaseHelpers.php) for more information.

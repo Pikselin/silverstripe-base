@@ -6,7 +6,7 @@ A number of additional fields are available from **admin/settings**.
 This module adds a simple site email field to **admin/settings**. Access it via
 
 ```html
-    $SiteConfig.SiteEmail
+$SiteConfig.SiteEmail
 ```
 ## Google Analytics
 
@@ -16,7 +16,7 @@ Tag manager and GA4. Just add the account ID for one of these to have them inclu
 ### Google Analytics template variable
 
 ```html
-    <% if $GACode %>$GACode<% end_if %>
+<% if $GACode %>$GACode<% end_if %>
 ```
 ## Google Tag Manager
 
@@ -25,9 +25,9 @@ Add the Tag Manager key in here and then add the template calls to include Tag M
 ### Google Tag Manager template variables
 
 ```html 
-    <% if $TagManagerNoScript %>$TagManagerNoScript<% end_if %>
+<% if $TagManagerNoScript %>$TagManagerNoScript<% end_if %>
 
-    <% if $TagManagerCode %>$TagManagerCode<% end_if %>
+<% if $TagManagerCode %>$TagManagerCode<% end_if %>
 ```
 ## Google Maps API Key
 
@@ -40,7 +40,7 @@ Coming soon
 # Site themes
 
 This module adds functionality to set the theme from the CMS .
-
+ß
 In this context, you have the ability to define a global theme for the entire website, which will take precedence over any theme that is hardcoded into the website's configuration. The global theme can be set at a central location to ensure consistency across the site.
 
 However, it's important to note that you also have the option to override the global theme on a page-by-page basis. Each page has a "Theme" tab where you can specify a different theme for that specific page. If you choose to set a theme on a particular page, its child pages will inherit the same theme unless they have their own individual theme specified.
