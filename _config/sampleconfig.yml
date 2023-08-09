@@ -1,7 +1,0 @@
-#pikselin\base\SVGIcon:
-#  icon_file: silverstripe-base/client/images/sprite.symbol.svg
-#  image_files:
-#    industry_icons:
-#      icon_file: themes/mytheme/dist/images/industry.symbol.svg
-#    navigation_icons:
-#      icon_file: themes/mytheme/dist/images/navigation.symbol.svg
