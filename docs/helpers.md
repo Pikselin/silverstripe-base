@@ -5,7 +5,7 @@ A simple class is included that provides a few basic reusable static methods for
 Helpers can be accessed in templates by calling the method name:
 
 ```html
-ß$CurrentYear
+$CurrentYear
 ```
 Or in code:
 ```php
