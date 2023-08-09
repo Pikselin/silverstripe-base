@@ -19,11 +19,7 @@ Or in yml
       extensions:
         - Pikselin\base\TeaserExtension
 ```
-Full namespace for this extension
 
-```php
-    namespace Pikselin\base\TeaserExtension;
-```
 ## Image upload validator class
 Simple image upload validation for forms
 
