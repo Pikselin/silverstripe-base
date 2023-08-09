@@ -7,8 +7,8 @@ To activate the extension add it via the extensions static:
 
 ```php
 private static $extensions = [
-        TeaserExtension::class
-    ];
+    TeaserExtension::class
+];
 ```
 Or in yml
 
