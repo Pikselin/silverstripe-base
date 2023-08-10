@@ -1,0 +1,9 @@
+Page:
+  dashboard_automatic_search_redirect: true
+---
+Name: app-dashboard
+---
+Plastyk\Dashboard\Admin\DashboardAdmin:
+  contact_email: 'support@pikselin.com'
+  contact_name: 'Pikselin support'
+  panel_accent_color: '#D5141B'
