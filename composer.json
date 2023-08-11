@@ -35,7 +35,6 @@
         "gorriecoe/silverstripe-link": "^1.4",
         "gorriecoe/silverstripe-linkfield": "^1.0",
 
-        "silverstripe/googlesitemaps": "^2.2|^3",
         "innoweb/silverstripe-page-icons": "^2.4",
         "silverstripe/docstation": "dev-main#a8b42061437a972a8f311fb8a8fcd53d4dde092b",
         "silverstripe/taxonomy": "^2.5|^3",
