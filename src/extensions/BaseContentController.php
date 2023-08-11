@@ -40,8 +40,8 @@ namespace Pikselin\base {
             if ($page === false) {
                 $page = $this->owner;
             }
-            if (!empty($page->Theme)) {
-                return $page->Theme;
+            if (!empty($page->PB_Theme)) {
+                return $page->PB_Theme;
             } else {
                 return $this->owner->ClosestTheme($page->Parent());
             }
