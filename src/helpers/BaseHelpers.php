@@ -1,6 +1,14 @@
 <?php
 
+use SilverStripe\Forms\GridField\GridFieldAddExistingAutocompleter;
+use SilverStripe\Forms\GridField\GridFieldAddNewButton;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use SilverStripe\Forms\GridField\GridFieldDeleteAction;
+use SilverStripe\Forms\GridField\GridFieldFilterHeader;
+use SilverStripe\Forms\GridField\GridFieldPageCount;
+use SilverStripe\Versioned\GridFieldArchiveAction;
 use SilverStripe\View\TemplateGlobalProvider;
+use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -59,4 +67,50 @@ class BaseHelpers implements TemplateGlobalProvider
         }
         return $themes;
     }
+
+    public static function GridFieldConfig($sortField = false, $rows = 10, $addnew = true, $autocomplete = true, $filterheader = true, $pagecount = true, $actionmenu = true, $archive = true, $delete = false): GridFieldConfig_RelationEditor
+    {
+
+        $GridConf = GridFieldConfig_RelationEditor::create($rows);
+
+        if ($delete !== false) {
+            $GridConf->addComponent(new GridFieldDeleteAction());
+        }
+
+        if ($sortField !== false) {
+            $GridConf->addComponent(new GridFieldOrderableRows($sortField));
+        }
+
+        $remove = [];
+
+        if ($autocomplete == false) {
+            $remove[] = GridFieldAddExistingAutocompleter::class;
+        }
+
+        if ($filterheader == false) {
+            $remove[] = GridFieldFilterHeader::class;
+        }
+
+        if ($pagecount == false) {
+            $remove[] = GridFieldPageCount::class;
+        }
+
+        if ($actionmenu == false) {
+            $remove[] = GridFieldPageCount::class;
+        }
+
+        if ($archive == false) {
+            $remove[] = GridFieldArchiveAction::class;
+        }
+        if ($addnew == false) {
+            $remove[] = GridFieldAddNewButton::class;
+        }
+
+        if (count($remove) > 0) {
+            $GridConf->removeComponentsByType($remove);
+        }
+
+        return $GridConf;
+    }
+
 }
