@@ -60,7 +60,7 @@
         "undefinedoffset/sortablegridfield": "^2.2",
         "quinninteractive/silverstripe-seo": "^1.1",
         "silverstripe/crontask": "^2.6",
-        "pikselin/silverstripe-pagebanners": "dev-main",
+        "pikselin/silverstripe-pagebanners": "^1.0.0",
         "plastyk/dashboard": "^2.0"
     },
     "repositories": [
