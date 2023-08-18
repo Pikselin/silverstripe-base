@@ -36,8 +36,7 @@
         "axllent/silverstripe-trailing-slash": "^2.2",
         "heyday/silverstripe-hashpath": "^3.0",
         "quinninteractive/silverstripe-seo": "^1.1",
-        "silverstripe/crontask": "^2.6",
-        "pikselin/silverstripe-pagebanners": "^1.0.0"
+        "silverstripe/crontask": "^2.6"
         
     },
     "repositories": [
