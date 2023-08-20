@@ -24,7 +24,6 @@
         "silverstripe/redirectedurls": "^2.2",
         "gorriecoe/silverstripe-link": "^1.4",
         "gorriecoe/silverstripe-linkfield": "^1.0",
-        "innoweb/silverstripe-page-icons": "^2.4",
         "silverstripe/developer-docs": "^5.0",
         "silverstripe/docstation": "dev-main#a8b42061437a972a8f311fb8a8fcd53d4dde092b",
         "stevie-mayhew/silverstripe-svg": "^2.2",
@@ -36,7 +35,8 @@
         "axllent/silverstripe-trailing-slash": "^2.2",
         "heyday/silverstripe-hashpath": "^3.0",
         "quinninteractive/silverstripe-seo": "^1.1",
-        "silverstripe/crontask": "^2.6"
+        "silverstripe/crontask": "^2.6",
+        "toastnz/favicon": "dev-main"
         
     },
     "require-dev": {
