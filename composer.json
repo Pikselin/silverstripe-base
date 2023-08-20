@@ -17,7 +17,26 @@
     "require": {
         "silverstripe/cms": "^4",
         "silverstripe/framework": "^4",
-        "gorriecoe/silverstripe-menu": "^2.0"
+        "gorriecoe/silverstripe-menu": "^2.0",
+        "plastyk/dashboard": "^2.0",
+        "ryanpotter/silverstripe-cms-theme": "dev-master#44a15b6a071bd36c57d0a72ecb0e3d141e5a86d0",
+        "heyday/silverstripe-responsive-images": "^2.0",
+        "silverstripe/redirectedurls": "^2.2",
+        "gorriecoe/silverstripe-link": "^1.4",
+        "gorriecoe/silverstripe-linkfield": "^1.0",
+        "innoweb/silverstripe-page-icons": "^2.4",
+        "silverstripe/developer-docs": "^5.0",
+        "silverstripe/docstation": "dev-main#a8b42061437a972a8f311fb8a8fcd53d4dde092b",
+        "stevie-mayhew/silverstripe-svg": "^2.2",
+        "jonom/focuspoint": "^4.0",
+        "axllent/silverstripe-email-obfuscator": "^2.1",
+        "silverstripe/mimevalidator": "^2.5",
+        "silverstripe/mfa": "^4.8",
+        "silverstripe/spellcheck": "^2.5",
+        "axllent/silverstripe-trailing-slash": "^2.2",
+        "heyday/silverstripe-hashpath": "^3.0",
+        "quinninteractive/silverstripe-seo": "^1.1",
+        "silverstripe/crontask": "^2.6"
         
     },
     "require-dev": {
