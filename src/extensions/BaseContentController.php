@@ -16,9 +16,9 @@ namespace Pikselin\base {
                 return;
             }
 
-            $ClosestTheme = $this->owner->ClosestTheme($this->owner->Parent());
-            if (!empty($ClosestTheme)) {
-                SSViewer::set_themes([$ClosestTheme, SSViewer::DEFAULT_THEME]);
+            $PBClosestTheme = $this->owner->PBClosestTheme($this->owner->Parent());
+            if (!empty($PBClosestTheme)) {
+                SSViewer::set_themes([$PBClosestTheme, SSViewer::DEFAULT_THEME]);
                 return;
             }
 
@@ -30,7 +30,7 @@ namespace Pikselin\base {
             }
         }
 
-        public function ClosestTheme($page = false)
+        public function PBClosestTheme($page = false)
         {
 
             if(isset($page->ID) && $page->ID <= 0 ) {
@@ -43,7 +43,7 @@ namespace Pikselin\base {
             if (!empty($page->PB_Theme)) {
                 return $page->PB_Theme;
             } else {
-                return $this->owner->ClosestTheme($page->Parent());
+                return $this->owner->PBClosestTheme($page->Parent());
             }
         }
     }
