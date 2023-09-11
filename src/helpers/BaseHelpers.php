@@ -22,8 +22,18 @@ class BaseHelpers implements TemplateGlobalProvider
     {
         return [
             'CurrentYear',
-            'TimeLength'
+            'TimeLength',
+            'CleanString'
         ];
+    }
+
+    public static function CleanString($string,$lowercase = true): string
+    {
+        if($string) {
+            $str = preg_replace('/[^\da-z]/i', '', $string);
+            return $lowercase === true ? strtolower($str) : $str;
+        }
+        return false;
     }
 
     /*
