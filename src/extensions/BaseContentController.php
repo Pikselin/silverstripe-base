@@ -2,6 +2,8 @@
 
 namespace Pikselin\base {
 
+    use Pikselin\Extensions\Carousel\CarouselExtensionController;
+    use SilverStripe\Core\Config\Config;
     use SilverStripe\ORM\DataExtension;
     use SilverStripe\SiteConfig\SiteConfig;
     use SilverStripe\View\SSViewer;
@@ -10,6 +12,9 @@ namespace Pikselin\base {
     {
         public function onBeforeInit()
         {
+            //echo Config::inst()->get(CarouselExtensionController::class, 'test_string');
+            //Config::modify()->merge(CarouselExtensionController::class, 'test_string', 'overridden test string');
+            //echo Config::inst()->get(CarouselExtensionController::class, 'test_string');
             // check current page for override theme
             if (!empty($this->owner->PB_Theme)) {
                 SSViewer::set_themes([$this->owner->PB_Theme, SSViewer::DEFAULT_THEME]);
