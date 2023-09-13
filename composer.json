@@ -39,36 +39,64 @@
         "quinninteractive/silverstripe-seo": "^1.1",
         "silverstripe/crontask": "^2.6",
         "plastyk/dashboard": "^2.0",
-
-
-        "jonom/silverstripe-betternavigator": "^5.4",
         "silverstripe/sharedraftcontent": "^2.8|^3",
         "silverstripe/contentreview": "^4.7",
-
-
-
         "silverstripe/environmentcheck": "^2.6|^3",
-        "jonom/silverstripe-environment-awareness": "dev-master#bbf6f3884dc563e54d16bed20c03c9496ccb8e76",
         "bringyourownideas/silverstripe-maintenance": "^2.7",
-        "bringyourownideas/silverstripe-composer-update-checker": "^3.1"
+        "bringyourownideas/silverstripe-composer-update-checker": "^3.1",
+        "firesphere/cspheaders": "^1.4",
+        "pikselin/module-helpers": "*"
     },
     "repositories": [
         {
-            "type": "vcs",
+            "type": "github",
             "url": "git@github.com:pikselin/silverstripe-elemental"
+        },
+        {
+            "type": "github",
+            "url": "git@github.com:Firesphere/potential-doodle.git"
+        },
+        {
+            "type": "github",
+            "url": "git@github.com:Pikselin/coding-standards.git"
         }
     ],
     "require-dev": {
-        "dnadesign/silverstripe-populate": "^2.2"
+        "dnadesign/silverstripe-populate": "^2.2",
+        "pikselin/coding-standards": "dev-main"
     },
     "config": {
-        "process-timeout": 600
+        "process-timeout": 600,
+        "allow-plugins": {
+            "composer/installers": true,
+            "silverstripe/recipe-plugin": true,
+            "silverstripe/vendor-plugin": true,
+            "php-http/discovery": true
+        }
     },
-
-
     "extra": {
         "expose": [
             "client"
+        ],
+        "project-files-installed": [
+            ".editorconfig",
+            ".php-cs-fixer.php",
+            "app/.htaccess",
+            "app/_config.php",
+            "app/_config/dev.yml",
+            "app/_config/mimevalidator.yml",
+            "app/_config/mysite.yml",
+            "app/src/Page.php",
+            "app/src/PageController.php",
+            "phpstan.neon",
+            "themes/pikselin/composer.json",
+            "themes/pikselin/package.json",
+            "themes/pikselin/webpack.mix.js"
+        ],
+        "public-files-installed": [
+            ".htaccess",
+            "index.php",
+            "web.config"
         ]
     },
     "autoload": {
@@ -79,4 +107,3 @@
     "minimum-stability": "dev",
     "prefer-stable": true
 }
-
