@@ -30,7 +30,7 @@
         "silverstripe/mimevalidator": "^2.5",
         "silverstripe/mfa": "^4.8",
         "silverstripe/docstation": "dev-main#a8b42061437a972a8f311fb8a8fcd53d4dde092b",
-        "ryanpotter/silverstripe-cms-theme": "dev-master#44a15b6a071bd36c57d0a72ecb0e3d141e5a86d0",
+        "ryanpotter/silverstripe-cms-theme": "dev-master#fac7a5d13da59017c0cb9889a55aa22f436c8cc3",
         "jonom/silverstripe-text-target-length": "^2.0",
         "lekoala/silverstripe-cms-actions": "^1.4",
         "axllent/silverstripe-trailing-slash": "^2.2",
