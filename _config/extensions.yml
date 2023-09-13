@@ -1,14 +1,13 @@
 ---
-Name: pikselin-base-headers
-before: '*'
+Name: pikselin-base-extensions
 ---
 SilverStripe\CMS\Model\SiteTree:
   extensions:
     - Pikselin\base\BaseSiteTreeExtension
-    - Pikselin\base\SecurityPolicyExtension
+#    - Pikselin\base\SecurityPolicyExtension
 SilverStripe\CMS\Controllers\ContentController:
   extensions:
     - Pikselin\base\BaseContentController
-SilverStripe\CMS\Controllers\ContentController\PageController:
-  extensions:
-    - Pikselin\base\SecurityPolicyController
+#SilverStripe\CMS\Controllers\ContentController\PageController:
+#  extensions:
+#    - Pikselin\base\SecurityPolicyController

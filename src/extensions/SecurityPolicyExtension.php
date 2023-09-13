@@ -4,7 +4,12 @@ namespace Pikselin\base {
 
 use SilverStripe\ORM\DataExtension;
 
-    class SecurityPolicyExtension extends DataExtension
+    /**
+ * Class \Pikselin\base\SecurityPolicyExtension
+ *
+ * @property SecurityPolicyExtension $owner
+ */
+class SecurityPolicyExtension extends DataExtension
     {
         protected function getNonce(int $length = 16): string
         {

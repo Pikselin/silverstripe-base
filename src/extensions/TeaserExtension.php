@@ -10,6 +10,14 @@ use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\ORM\DataExtension;
 
+/**
+ * Class \Pikselin\base\TeaserExtension
+ *
+ * @property TeaserExtension $owner
+ * @property string $TeaserText
+ * @property int $TeaserImageID
+ * @method Image TeaserImage()
+ */
 class TeaserExtension extends DataExtension
 {
     private static $db = [

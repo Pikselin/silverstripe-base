@@ -44,7 +44,7 @@ class BaseHelpers implements TemplateGlobalProvider
         return date('Y');
     }
 
-    /*
+    /**
      * converts an integer into a human readable length, useful for video embeds, podcasts etc.
      */
     public static function TimeLength(int $time): string

@@ -8,7 +8,12 @@ namespace Pikselin\base {
     use SilverStripe\SiteConfig\SiteConfig;
     use SilverStripe\View\SSViewer;
 
-    class BaseContentController extends DataExtension
+    /**
+ * Class \Pikselin\base\BaseContentController
+ *
+ * @property ContentController|BaseContentController $owner
+ */
+class BaseContentController extends DataExtension
     {
         public function onBeforeInit()
         {

@@ -8,6 +8,12 @@ use SilverStripe\ORM\DataExtension;
 use SilverStripe\SiteConfig\SiteConfig;
 use SilverStripe\View\ArrayData;
 
+/**
+ * Class \Pikselin\base\BaseSiteTreeExtension
+ *
+ * @property SiteTree|BaseSiteTreeExtension $owner
+ * @property string $PB_Theme
+ */
 class BaseSiteTreeExtension extends DataExtension
 {
     private static array $db = [

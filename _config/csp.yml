@@ -1,5 +1,7 @@
 ---
-Name: CSPHeaders
+Name: Project-CSPHeaders
+After:
+  - CSPHeaders
 ---
 Firesphere\CSPHeaders\View\CSPBackend:
   permissions_config:

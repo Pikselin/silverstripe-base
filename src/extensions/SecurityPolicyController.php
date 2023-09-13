@@ -5,7 +5,12 @@ namespace Pikselin\base {
     use SilverStripe\Core\Config\Configurable;
     use SilverStripe\ORM\DataExtension;
 
-    class SecurityPolicyController extends DataExtension
+    /**
+ * Class \Pikselin\base\SecurityPolicyController
+ *
+ * @property SecurityPolicyController $owner
+ */
+class SecurityPolicyController extends DataExtension
     {
         use Configurable;
 
