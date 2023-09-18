@@ -45,16 +45,12 @@
         "bringyourownideas/silverstripe-maintenance": "^2.7",
         "bringyourownideas/silverstripe-composer-update-checker": "^3.1",
         "firesphere/cspheaders": "^1.4",
-        "pikselin/module-helpers": "*"
+        "firesphere/module-helpers": "*"
     },
     "repositories": [
         {
             "type": "github",
             "url": "git@github.com:pikselin/silverstripe-elemental"
-        },
-        {
-            "type": "github",
-            "url": "git@github.com:Firesphere/potential-doodle.git"
         },
         {
             "type": "github",
