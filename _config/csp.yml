@@ -1,89 +1,89 @@
----
-Name: Project-CSPHeaders
-After:
-  - CSPHeaders
----
-Firesphere\CSPHeaders\View\CSPBackend:
-  permissions_config:
-    enabled: true
-    accelerator:
-      allow: [none]
-    ambient-light-sensor:
-      allow: [none]
-    autoplay:
-      self: true
-      allow: []
-    battery:
-      allow: [none]
-    camera:
-      allow: [none]
-    display-capture:
-      self: true
-      allow: ['*']
-    encrypted-media:
-      self: true
-      allow: []
-    fullscreen:
-      self: true
-      allow: []
-    geolocation:
-      allow: [none]
-    interest-cohort:
-      allow: [none]
-    microphone:
-      allow: [none]
-  referrer: same-origin
-  frame-options: SAMEORIGIN
-  content-type-options: nosniff
-  HSTS:
-    enabled: false
-    max-age: 31536000
-    include_subdomains: true
-  csp_config:
-    enabled: true
-    in_cms: false
-    report-only: false
-    report-uri: "https://127.0.0.1/r/d/csp/enforce"
-    base-uri:
-      allow: []
-      self: true
-    default-src: []
-    child-src:
-      allow: []
-      self: false
-    connect-src:
-      allow: []
-      self: true
-    font-src:
-      allow: []
-      self: true
-    form-action:
-      self: true
-    frame-ancestors: []
-    img-src:
-      allow: []
-      blob: true
-      self: true
-      data: true
-    media-src: []
-    object-src: []
-    plugin-types: []
-    script-src:
-      allow: []
-      self: true
-      unsafe-inline: false
-      unsafe-eval: false
-    style-src:
-      self: true
-      unsafe-inline: true
-    upgrade-insecure-requests: true
-  jsSRI: true
-  cssSRI: false
-  useNonce: false
----
-Only:
-  environment: 'dev'
----
-Firesphere\CSPHeaders\View\CSPBackend:
-  csp_config:
-    report-only: true
+#---
+#Name: Project-CSPHeaders
+#After:
+#  - CSPHeaders
+#---
+#Firesphere\CSPHeaders\View\CSPBackend:
+#  permissions_config:
+#    enabled: true
+#    accelerator:
+#      allow: [none]
+#    ambient-light-sensor:
+#      allow: [none]
+#    autoplay:
+#      self: true
+#      allow: []
+#    battery:
+#      allow: [none]
+#    camera:
+#      allow: [none]
+#    display-capture:
+#      self: true
+#      allow: ['*']
+#    encrypted-media:
+#      self: true
+#      allow: []
+#    fullscreen:
+#      self: true
+#      allow: []
+#    geolocation:
+#      allow: [none]
+#    interest-cohort:
+#      allow: [none]
+#    microphone:
+#      allow: [none]
+#  referrer: same-origin
+#  frame-options: SAMEORIGIN
+#  content-type-options: nosniff
+#  HSTS:
+#    enabled: false
+#    max-age: 31536000
+#    include_subdomains: true
+#  csp_config:
+#    enabled: true
+#    in_cms: false
+#    report-only: false
+#    report-uri: "https://127.0.0.1/r/d/csp/enforce"
+#    base-uri:
+#      allow: []
+#      self: true
+#    default-src: []
+#    child-src:
+#      allow: []
+#      self: false
+#    connect-src:
+#      allow: []
+#      self: true
+#    font-src:
+#      allow: []
+#      self: true
+#    form-action:
+#      self: true
+#    frame-ancestors: []
+#    img-src:
+#      allow: []
+#      blob: true
+#      self: true
+#      data: true
+#    media-src: []
+#    object-src: []
+#    plugin-types: []
+#    script-src:
+#      allow: []
+#      self: true
+#      unsafe-inline: false
+#      unsafe-eval: false
+#    style-src:
+#      self: true
+#      unsafe-inline: true
+#    upgrade-insecure-requests: true
+#  jsSRI: true
+#  cssSRI: false
+#  useNonce: false
+#---
+#Only:
+#  environment: 'dev'
+#---
+#Firesphere\CSPHeaders\View\CSPBackend:
+#  csp_config:
+#    report-only: true

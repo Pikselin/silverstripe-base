@@ -43,9 +43,7 @@
         "silverstripe/contentreview": "^4.7",
         "silverstripe/environmentcheck": "^2.6|^3",
         "bringyourownideas/silverstripe-maintenance": "^2.7",
-        "bringyourownideas/silverstripe-composer-update-checker": "^3.1",
-        "firesphere/cspheaders": "^1.4",
-        "firesphere/module-helpers": "*"
+        "bringyourownideas/silverstripe-composer-update-checker": "^3.1"
     },
     "repositories": [
         {
