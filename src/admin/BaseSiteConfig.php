@@ -34,7 +34,7 @@ class BaseSiteConfig extends DataExtension
         public function updateCMSFields(FieldList $fields)
         {
             // clear fields in case another module has set them in config
-            $fields->removeByName('Tagline');
+            //$fields->removeByName('Tagline');
             $fields->removeByName('TagManager');
             $fields->removeByName('GACode');
             $fields->removeByName('GoogleMapsAPIKey');
