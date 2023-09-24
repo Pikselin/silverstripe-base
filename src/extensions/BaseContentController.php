@@ -23,7 +23,7 @@ class BaseContentController extends DataExtension
             //echo Config::inst()->get(CarouselExtensionController::class, 'test_string');
             // check current page for override theme
 
-            if(!$this->parent instanceof SiteTree) {
+            if(!$this->owner->parent instanceof SiteTree) {
                 return;
             }
 
