@@ -3,6 +3,7 @@
 namespace Pikselin\base {
 
     use Pikselin\Extensions\Carousel\CarouselExtensionController;
+    use SilverStripe\CMS\Controllers\ContentController;
     use SilverStripe\CMS\Model\SiteTree;
     use SilverStripe\Core\Config\Config;
     use SilverStripe\ORM\DataExtension;
@@ -22,8 +23,7 @@ class BaseContentController extends DataExtension
             //Config::modify()->merge(CarouselExtensionController::class, 'test_string', 'overridden test string');
             //echo Config::inst()->get(CarouselExtensionController::class, 'test_string');
             // check current page for override theme
-
-            if(!$this->owner->parent instanceof SiteTree) {
+            if(!$this->owner instanceof ContentController) {
                 return;
             }
 

@@ -2,7 +2,8 @@
 
 namespace Pikselin\base {
 
-use SilverStripe\ORM\DataExtension;
+    use SilverStripe\Core\Extension;
+    use SilverStripe\ORM\DataExtension;
 
     /**
  * Class \Pikselin\base\SecurityPolicyExtension

@@ -1,0 +1,48 @@
+---
+#Name: pikselin-pikselin-csp-config
+#After: '*'
+#---
+#Pikselin\base\SecurityPolicyController:
+#  #  use_nonce: false
+#  #  csp_type: Content-Security-Policy
+#  #  csp_type: false /* setting to false disables CSP header inclusion but won't disable standard headers*/
+#  #  possible options [Content-Security-Policy, Content-Security-Policy-Report-Only, false]
+#  #  https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
+#  headers:
+#    X-Frame-Options: SAMEORIGIN
+#    Referrer-Policy: same-origin
+#    X-Content-Type-Options: nosniff
+#    Permissions-Policy: "camera=(), cross-origin-isolated=*, fullscreen=(*)"
+#    Strict-Transport-Security: "max-age=31536000; includeSubDomains"
+#    X-Powered-By: "xxx"
+#    Access-Control-Allow-Origin: "*"
+#  csp_type: Content-Security-Policy
+#  csp_headers:
+#    default-src:
+#      - "'self'"
+#      - "data:"
+#      - "'unsafe-inline'"
+#      - "unsafe-eval"
+#      - '*.googleapis.com'
+#      - '*.youtube.com'
+#      - '*.google-analytics.com'
+#    script-src:
+#      - "'self'"
+#      - "data:"
+#      - "unsafe-inline"
+#      - "unsafe-eval"
+#    connect-src:
+#      - "'self'"
+#    img-src:
+#      - "'self'"
+#      - "data:"
+#    font-src:
+#      - "'self'"
+#      - "data:"
+#    frame-src:
+#      - "*"
+#      - "'self'"
+#    frame-ancestors:
+#      - "'self'"
+#    base-uri:
+#      - "'self'"

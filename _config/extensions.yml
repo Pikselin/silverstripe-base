@@ -1,13 +1,15 @@
 ---
 Name: pikselin-base-extensions
 ---
+PageController:
+  extensions:
+    - Pikselin\base\SecurityPolicyController
+
 SilverStripe\CMS\Model\SiteTree:
   extensions:
     - Pikselin\base\BaseSiteTreeExtension
     - Pikselin\base\SecurityPolicyExtension
+
 SilverStripe\CMS\Controllers\ContentController:
   extensions:
     - Pikselin\base\BaseContentController
-SilverStripe\CMS\Controllers\ContentController\PageController:
-  extensions:
-    - Pikselin\base\SecurityPolicyController

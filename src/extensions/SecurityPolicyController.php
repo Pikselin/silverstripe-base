@@ -3,6 +3,7 @@
 namespace Pikselin\base {
 
     use SilverStripe\Core\Config\Configurable;
+    use SilverStripe\Core\Extension;
     use SilverStripe\ORM\DataExtension;
 
     /**
@@ -10,7 +11,7 @@ namespace Pikselin\base {
  *
  * @property SecurityPolicyController $owner
  */
-class SecurityPolicyController extends DataExtension
+class SecurityPolicyController extends Extension
     {
         use Configurable;
 
@@ -21,8 +22,7 @@ class SecurityPolicyController extends DataExtension
         private static array $headers = [];
         private static array $csp_headers = [];
         private static bool $use_nonce = true;
-        //private static $csp_type = 'Content-Security-Policy';
-        private static bool $csp_type = false;
+        private static $csp_type = 'Content-Security-Policy';
         private static array $nonceable = [
             'script-src',
             'script-src-elem'
@@ -33,7 +33,6 @@ class SecurityPolicyController extends DataExtension
             $csp_type = (null !== $this->config()->get('csp_type')) ? $this->config()->get('csp_type') : self::$csp_type;
 
             $headers = $this->config()->get('headers');
-
             // base headers
             if (is_array($headers)) {
                 foreach ($headers as $k => $v) {
@@ -65,6 +64,7 @@ class SecurityPolicyController extends DataExtension
                     $this->owner->getResponse()->addHeader($csp_type, $cspdirectives);
                 }
             }
+            return;
         }
     }
 
