@@ -2,6 +2,7 @@
 
 namespace Pikselin\base {
 
+    use DNADesign\Elemental\Models\ElementalArea;
     use Pikselin\Extensions\Carousel\CarouselExtensionController;
     use SilverStripe\CMS\Controllers\ContentController;
     use SilverStripe\CMS\Model\SiteTree;
@@ -23,7 +24,7 @@ class BaseContentController extends DataExtension
             //Config::modify()->merge(CarouselExtensionController::class, 'test_string', 'overridden test string');
             //echo Config::inst()->get(CarouselExtensionController::class, 'test_string');
             // check current page for override theme
-            if(!$this->owner instanceof ContentController) {
+            if(!$this->owner instanceof ContentController || $this->owner instanceof ElementalArea) {
                 return;
             }
 
