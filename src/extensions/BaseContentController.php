@@ -24,7 +24,7 @@ class BaseContentController extends DataExtension
             //Config::modify()->merge(CarouselExtensionController::class, 'test_string', 'overridden test string');
             //echo Config::inst()->get(CarouselExtensionController::class, 'test_string');
             // check current page for override theme
-            if(!$this->owner instanceof ContentController || $this->owner instanceof ElementalArea) {
+            if(!$this->owner->parent instanceof SiteTree) {
                 return;
             }
 
