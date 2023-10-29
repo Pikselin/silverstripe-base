@@ -18,6 +18,7 @@ namespace Pikselin\base {
  */
 class BaseContentController extends DataExtension
     {
+        public function onBeforeInit()
         {
             //echo Config::inst()->get(CarouselExtensionController::class, 'test_string');
             //Config::modify()->merge(CarouselExtensionController::class, 'test_string', 'overridden test string');
