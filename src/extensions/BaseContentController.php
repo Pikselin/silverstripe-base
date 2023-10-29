@@ -18,14 +18,15 @@ namespace Pikselin\base {
  */
 class BaseContentController extends DataExtension
     {
-        public function onBeforeInit()
         {
             //echo Config::inst()->get(CarouselExtensionController::class, 'test_string');
             //Config::modify()->merge(CarouselExtensionController::class, 'test_string', 'overridden test string');
             //echo Config::inst()->get(CarouselExtensionController::class, 'test_string');
             // check current page for override theme
-            if(!$this->owner->parent instanceof SiteTree) {
+            if(!$this->owner instanceof ContentController || $this->owner->ClassName == 'DNADesign\ElementalUserForms\Model\ElementForm') {
                 return;
+            }  else {
+                $PBClosestTheme = $this->owner->PBClosestTheme($this->owner->Parent());
             }
 
             if (!empty($this->owner->PB_Theme)) {
@@ -33,7 +34,7 @@ class BaseContentController extends DataExtension
                 return;
             }
 
-            $PBClosestTheme = $this->owner->PBClosestTheme($this->owner->Parent());
+            //$PBClosestTheme = $this->owner->PBClosestTheme($this->owner);
             if (!empty($PBClosestTheme)) {
                 SSViewer::set_themes([$PBClosestTheme, SSViewer::DEFAULT_THEME]);
                 return;
