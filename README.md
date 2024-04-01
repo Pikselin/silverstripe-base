@@ -8,7 +8,7 @@ Silverstripe 5.x
 
     composer require pikselin/base
 
-* See 4 branch for Silverstripe 4 version *
+*See 4 branch for Silverstripe 4 version*
 
 # Features
 
