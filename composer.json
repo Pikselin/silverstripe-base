@@ -27,14 +27,14 @@
         "colymba/gridfield-bulk-editing-tools": "dev-master",
         "symbiote/silverstripe-gridfieldextensions": "^4",
         "axllent/silverstripe-email-obfuscator": "dev-master",
-        "silverstripe/mimevalidator": "^2.5",
-        "silverstripe/mfa": "^4.8",
-        "silverstripe/docstation": "dev-main#a8b42061437a972a8f311fb8a8fcd53d4dde092b",
-        "ryanpotter/silverstripe-cms-theme": "dev-master#fac7a5d13da59017c0cb9889a55aa22f436c8cc3",
-        "jonom/silverstripe-text-target-length": "^2.0",
-        "lekoala/silverstripe-cms-actions": "^1.4",
-        "axllent/silverstripe-trailing-slash": "^2.2",
-        "heyday/silverstripe-hashpath": "^3.0",
+        "silverstripe/mimevalidator": "^3",
+        "silverstripe/mfa": "^5",
+        "silverstripe/docstation": "dev-main",
+        "ryanpotter/silverstripe-cms-theme": "dev-master",
+        "jonom/silverstripe-text-target-length": "dev-master",
+        "lekoala/silverstripe-cms-actions": "dev-master",
+        "axllent/silverstripe-trailing-slash": "dev-master",
+        "heyday/silverstripe-hashpath": "dev-main",
         "undefinedoffset/sortablegridfield": "^2.2",
         "quinninteractive/silverstripe-seo": "^1.1",
         "silverstripe/crontask": "^2.6",
@@ -57,6 +57,10 @@
         {
             "type": "vcs",
             "url": "git@github.com:somardigital/silverstripe-menu.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:elliot-sawyer/silverstripe-docstation.git"
         }        
     ],
     "require-dev": {
