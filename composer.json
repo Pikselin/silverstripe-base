@@ -15,16 +15,16 @@
         }
     ],
     "require": {
-        "silverstripe/cms": "^4",
-        "silverstripe/framework": "^4",
-        "gorriecoe/silverstripe-menu": "^2.0",
-        "purplespider/asset-alt-text": "^1.1",
-        "heyday/silverstripe-responsive-images": "^2.0",
-        "jonom/focuspoint": "^4.0",
-        "stevie-mayhew/silverstripe-svg": "^2.2",
-        "silverstripe/redirectedurls": "^2.2",
-        "tractorcow/silverstripe-robots": "^4.0",
-        "colymba/gridfield-bulk-editing-tools": "^3.1",
+        "silverstripe/cms": "^5",
+        "silverstripe/framework": "^5",
+        "gorriecoe/silverstripe-menu": "dev-master",
+        "purplespider/asset-alt-text": "dev-master",
+        "heyday/silverstripe-responsive-images": "dev-master",
+        "jonom/focuspoint": "dev-master",
+        "stevie-mayhew/silverstripe-svg": "dev-master",
+        "silverstripe/redirectedurls": "dev-master3",
+        "tractorcow/silverstripe-robots": "dev-master",
+        "colymba/gridfield-bulk-editing-tools": "dev-master",
         "symbiote/silverstripe-gridfieldextensions": "^3.6",
         "axllent/silverstripe-email-obfuscator": "^2.1",
         "silverstripe/mimevalidator": "^2.5",
@@ -53,7 +53,11 @@
         {
             "type": "github",
             "url": "git@github.com:Pikselin/coding-standards.git"
-        }
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:somardigital/silverstripe-menu.git"
+        }        
     ],
     "require-dev": {
         "dnadesign/silverstripe-populate": "^2.2",
