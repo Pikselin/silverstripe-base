@@ -35,15 +35,14 @@
         "lekoala/silverstripe-cms-actions": "dev-master",
         "axllent/silverstripe-trailing-slash": "dev-master",
         "heyday/silverstripe-hashpath": "dev-main",
-        "undefinedoffset/sortablegridfield": "^2.2",
-        "quinninteractive/silverstripe-seo": "^1.1",
-        "silverstripe/crontask": "^2.6",
-        "plastyk/dashboard": "^2.0",
-        "silverstripe/sharedraftcontent": "^2.8|^3",
-        "silverstripe/contentreview": "^4.7",
-        "silverstripe/environmentcheck": "^2.6|^3",
-        "bringyourownideas/silverstripe-maintenance": "^2.7",
-        "bringyourownideas/silverstripe-composer-update-checker": "^3.1"
+        "undefinedoffset/sortablegridfield": "dev-master",
+        "quinninteractive/silverstripe-seo": "dev-develop",
+        "silverstripe/crontask": "^3",
+        "plastyk/dashboard": "dev-master",
+        "silverstripe/sharedraftcontent": "^3",
+        "silverstripe/contentreview": "^5",
+        "silverstripe/environmentcheck": "^3",
+        "bringyourownideas/silverstripe-composer-update-checker": "5"
     },
     "repositories": [
         {
@@ -61,10 +60,18 @@
         {
             "type": "vcs",
             "url": "git@github.com:elliot-sawyer/silverstripe-docstation.git"
-        }        
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:heyday/silverstripe-quinn-seo.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:creative-commoners/silverstripe-composer-update-checker.git"
+        }         
     ],
     "require-dev": {
-        "dnadesign/silverstripe-populate": "^2.2",
+        "dnadesign/silverstripe-populate": "dev-master",
         "pikselin/coding-standards": "dev-main"
     },
     "config": {
