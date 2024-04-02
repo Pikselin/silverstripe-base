@@ -17,7 +17,7 @@
     "require": {
         "silverstripe/cms": "^5",
         "silverstripe/framework": "^5",
-        "gorriecoe/silverstripe-menu": "dev-master",
+
         "purplespider/asset-alt-text": "dev-master",
         "heyday/silverstripe-responsive-images": "dev-master",
         "jonom/focuspoint": "dev-master",
@@ -35,39 +35,15 @@
         "axllent/silverstripe-trailing-slash": "dev-master",
         "heyday/silverstripe-hashpath": "dev-main",
         "undefinedoffset/sortablegridfield": "dev-master",
-        "quinninteractive/silverstripe-seo": "dev-develop",
+
         "silverstripe/crontask": "^3",
         "plastyk/dashboard": "dev-master",
         "silverstripe/sharedraftcontent": "^3",
         "silverstripe/contentreview": "^5",
-        "silverstripe/environmentcheck": "^3",
-        "bringyourownideas/silverstripe-composer-update-checker": "^5"
+        "silverstripe/environmentcheck": "^3"
     },
-    "repositories": [
-        {
-            "type": "github",
-            "url": "git@github.com:pikselin/silverstripe-elemental"
-        },
-        {
-            "type": "github",
-            "url": "git@github.com:Pikselin/coding-standards.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:somardigital/silverstripe-menu.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:heyday/silverstripe-quinn-seo.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:creative-commoners/silverstripe-composer-update-checker.git"
-        }         
-    ],
     "require-dev": {
-        "dnadesign/silverstripe-populate": "dev-master",
-        "pikselin/coding-standards": "dev-main"
+        "dnadesign/silverstripe-populate": "dev-master"
     },
     "config": {
         "process-timeout": 600,
