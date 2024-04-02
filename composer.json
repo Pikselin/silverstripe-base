@@ -59,7 +59,7 @@
         },
         {
             "type": "vcs",
-            "url": "git@github.com:Firesphere/silverstripe-docstation.git"
+            "url": "git@github.com:Pikselin/silverstripe-docstation.git"
         },
         {
             "type": "vcs",
