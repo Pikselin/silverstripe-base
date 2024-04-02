@@ -42,7 +42,7 @@
         "silverstripe/sharedraftcontent": "^3",
         "silverstripe/contentreview": "^5",
         "silverstripe/environmentcheck": "^3",
-        "bringyourownideas/silverstripe-composer-update-checker": "5"
+        "bringyourownideas/silverstripe-composer-update-checker": "^5"
     },
     "repositories": [
         {
