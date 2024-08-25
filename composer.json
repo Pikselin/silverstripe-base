@@ -24,7 +24,7 @@
         "stevie-mayhew/silverstripe-svg": "dev-master",
         "silverstripe/redirectedurls": "dev-master",
         "tractorcow/silverstripe-robots": "dev-master",
-        "colymba/gridfield-bulk-editing-tools": "dev-master",
+        "colymba/gridfield-bulk-editing-tools": "^4",
         "symbiote/silverstripe-gridfieldextensions": "^4",
         "axllent/silverstripe-email-obfuscator": "dev-master",
         "silverstripe/mimevalidator": "^3",
