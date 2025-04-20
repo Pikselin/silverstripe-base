@@ -22,7 +22,7 @@
         "heyday/silverstripe-responsive-images": "dev-master",
         "jonom/focuspoint": "dev-master",
         "stevie-mayhew/silverstripe-svg": "dev-master",
-        "silverstripe/redirectedurls": "dev-master",
+        "silverstripe/redirectedurls": "dev-main",
         "tractorcow/silverstripe-robots": "dev-master",
         "colymba/gridfield-bulk-editing-tools": "^4",
         "symbiote/silverstripe-gridfieldextensions": "^4",
