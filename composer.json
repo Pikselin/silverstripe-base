@@ -21,7 +21,7 @@
         "purplespider/asset-alt-text": "dev-master",
         "heyday/silverstripe-responsive-images": "dev-master",
         "jonom/focuspoint": "dev-master",
-        "stevie-mayhew/silverstripe-svg": "dev-master#d8ced26",
+        "stevie-mayhew/silverstripe-svg": "2.4",
         "silverstripe/redirectedurls": "dev-main",
         "tractorcow/silverstripe-robots": "^4",
         "colymba/gridfield-bulk-editing-tools": "^4",
