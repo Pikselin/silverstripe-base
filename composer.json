@@ -32,7 +32,7 @@
         "ryanpotter/silverstripe-cms-theme": "dev-master",
         "lekoala/silverstripe-cms-actions": "dev-master",
         "heyday/silverstripe-hashpath": "dev-main",
-        "undefinedoffset/sortablegridfield": "dev-master",
+        "undefinedoffset/sortablegridfield": "^2",
 
         "silverstripe/crontask": "^3",
         "plastyk/dashboard": "^4",
