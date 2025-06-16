@@ -35,7 +35,7 @@
         "undefinedoffset/sortablegridfield": "dev-master",
 
         "silverstripe/crontask": "^3",
-        "plastyk/dashboard": "dev-master",
+        "plastyk/dashboard": "^4",
         "silverstripe/sharedraftcontent": "^3",
         "silverstripe/contentreview": "^5",
         "silverstripe/environmentcheck": "^3"
