@@ -20,7 +20,7 @@
 
         "purplespider/asset-alt-text": "dev-master",
         "heyday/silverstripe-responsive-images": "dev-master",
-        "jonom/focuspoint": "dev-master",
+        "jonom/focuspoint": "^5",
         "stevie-mayhew/silverstripe-svg": "2.4",
         "silverstripe/redirectedurls": "^3",
         "tractorcow/silverstripe-robots": "^4",
