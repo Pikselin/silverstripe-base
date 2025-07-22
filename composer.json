@@ -30,7 +30,7 @@
         "silverstripe/mimevalidator": "^3",
         "silverstripe/mfa": "^5",
         "ryanpotter/silverstripe-cms-theme": "dev-master",
-        "lekoala/silverstripe-cms-actions": "dev-master",
+        "lekoala/silverstripe-cms-actions": "^1.7",
         "heyday/silverstripe-hashpath": "dev-main",
         "undefinedoffset/sortablegridfield": "^2",
 
