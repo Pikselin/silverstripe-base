@@ -18,7 +18,7 @@
         "silverstripe/cms": "^5",
         "silverstripe/framework": "^5",
 
-        "purplespider/asset-alt-text": "dev-master",
+        "purplespider/asset-alt-text": "2.0.0",
         "heyday/silverstripe-responsive-images": "dev-master",
         "jonom/focuspoint": "^5",
         "stevie-mayhew/silverstripe-svg": "2.4",
