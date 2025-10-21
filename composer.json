@@ -31,7 +31,6 @@
         "silverstripe/mfa": "^6.1.0",
         "ryanpotter/silverstripe-cms-theme": "dev-master",
         "lekoala/silverstripe-cms-actions": "^2.0.0",
-        "heyday/silverstripe-hashpath": "dev-main",
         "undefinedoffset/sortablegridfield": "^3.0.2",
 
         "silverstripe/crontask": "^4.0.0",
