@@ -2,15 +2,16 @@
 
 namespace Pikselin\base {
 
+    use SilverStripe\CMS\Model\SiteTree;
     use SilverStripe\Core\Extension;
-    use SilverStripe\ORM\DataExtension;
 
     /**
  * Class \Pikselin\base\SecurityPolicyExtension
  *
  * @property SecurityPolicyExtension $owner
+ * @extends Extension<(SiteTree & static)>
  */
-class SecurityPolicyExtension extends DataExtension
+class SecurityPolicyExtension extends Extension
     {
         protected function getNonce(int $length = 16): string
         {
@@ -40,6 +41,7 @@ class SecurityPolicyExtension extends DataExtension
             if ($nonce === null) {
                 $nonce = $this->getNonce();
             }
+
             return $nonce;
         }
     }

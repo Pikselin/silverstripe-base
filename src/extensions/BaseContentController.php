@@ -2,12 +2,13 @@
 
 namespace Pikselin\base {
 
+    use SilverStripe\Core\Extension;
+    use DNADesign\ElementalUserForms\Model\ElementForm;
     use DNADesign\Elemental\Models\ElementalArea;
     use Pikselin\Extensions\Carousel\CarouselExtensionController;
     use SilverStripe\CMS\Controllers\ContentController;
     use SilverStripe\CMS\Model\SiteTree;
     use SilverStripe\Core\Config\Config;
-    use SilverStripe\ORM\DataExtension;
     use SilverStripe\SiteConfig\SiteConfig;
     use SilverStripe\View\SSViewer;
 
@@ -15,16 +16,17 @@ namespace Pikselin\base {
  * Class \Pikselin\base\BaseContentController
  *
  * @property ContentController|BaseContentController $owner
+ * @extends Extension<(ContentController & static)>
  */
-class BaseContentController extends DataExtension
+class BaseContentController extends Extension
     {
-        public function onBeforeInit()
+        protected function onBeforeInit()
         {
             //echo Config::inst()->get(CarouselExtensionController::class, 'test_string');
             //Config::modify()->merge(CarouselExtensionController::class, 'test_string', 'overridden test string');
             //echo Config::inst()->get(CarouselExtensionController::class, 'test_string');
             // check current page for override theme
-            if(!$this->owner instanceof ContentController || $this->owner->ClassName == 'DNADesign\ElementalUserForms\Model\ElementForm') {
+            if(!$this->owner instanceof ContentController || $this->owner->ClassName == ElementForm::class) {
                 return;
             }  else {
                 $PBClosestTheme = $this->owner->PBClosestTheme($this->owner->Parent());
@@ -59,6 +61,7 @@ class BaseContentController extends DataExtension
             if ($page === false) {
                 $page = $this->owner;
             }
+
             if (!empty($page->PB_Theme)) {
                 return $page->PB_Theme;
             } else {

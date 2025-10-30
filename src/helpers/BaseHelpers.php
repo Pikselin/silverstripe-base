@@ -33,6 +33,7 @@ class BaseHelpers implements TemplateGlobalProvider
             $str = preg_replace('/[^\da-z]/i', '', $string);
             return $lowercase === true ? strtolower($str) : $str;
         }
+
         return false;
     }
 
@@ -59,6 +60,7 @@ class BaseHelpers implements TemplateGlobalProvider
     if (!empty($data)) {
         return is_string($data) && is_array(json_decode($data, true));
     }
+
     return false;
 }
 
@@ -70,11 +72,14 @@ class BaseHelpers implements TemplateGlobalProvider
                 if ($theme[0] == '.') {
                     continue;
                 }
+
                 $theme = strtok($theme, '_');
                 $themes[$theme] = $theme;
             }
+
             ksort($themes);
         }
+
         return $themes;
     }
 
@@ -88,7 +93,7 @@ class BaseHelpers implements TemplateGlobalProvider
         }
 
         if ($sortField !== false) {
-            $GridConf->addComponent(new GridFieldOrderableRows($sortField));
+            $GridConf->addComponent(GridFieldOrderableRows::create($sortField));
         }
 
         $remove = [];
@@ -112,11 +117,12 @@ class BaseHelpers implements TemplateGlobalProvider
         if ($archive == false) {
             $remove[] = GridFieldArchiveAction::class;
         }
+
         if ($addnew == false) {
             $remove[] = GridFieldAddNewButton::class;
         }
 
-        if (count($remove) > 0) {
+        if ($remove !== []) {
             $GridConf->removeComponentsByType($remove);
         }
 

@@ -2,27 +2,30 @@
 
 namespace Pikselin\base;
 
+use SilverStripe\Core\Extension;
+use BaseHelpers;
+use SilverStripe\Model\ArrayData;
+use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\ORM\DataExtension;
 use SilverStripe\SiteConfig\SiteConfig;
-use SilverStripe\View\ArrayData;
 
 /**
  * Class \Pikselin\base\BaseSiteTreeExtension
  *
  * @property SiteTree|BaseSiteTreeExtension $owner
- * @property string $PB_Theme
+ * @property ?string $PB_Theme
+ * @extends Extension<(SiteTree & static)>
  */
-class BaseSiteTreeExtension extends DataExtension
+class BaseSiteTreeExtension extends Extension
 {
     private static array $db = [
         'PB_Theme' => 'Text'
     ];
 
-    public function updateCMSFields(FieldList $fields)
+    protected function updateCMSFields(FieldList $fields)
     {
-        $ThemeField = DropdownField::create('PB_Theme', 'Override theme', \BaseHelpers::ThemeList())
+        $ThemeField = DropdownField::create('PB_Theme', 'Override theme', BaseHelpers::ThemeList())
             ->setDescription('Override the default sites theme for this page.')->setEmptyString('Default theme');
 
         $fields->addFieldToTab('Root.Theme', $ThemeField);
@@ -32,13 +35,14 @@ class BaseSiteTreeExtension extends DataExtension
     {
         $SiteConfig = SiteConfig::current_site_config();
         if (!empty($SiteConfig->GACode)) {
-            $arrayData = new ArrayData([
+            $arrayData = ArrayData::create([
                 'GACode'      => $SiteConfig->GACode,
                 'StoredNonce' => $this->owner->StoredNonce()
             ]);
 
             return $arrayData->renderWith('GACode');
         }
+
         return false;
     }
 
@@ -46,13 +50,14 @@ class BaseSiteTreeExtension extends DataExtension
     {
         $SiteConfig = SiteConfig::current_site_config();
         if (!empty($SiteConfig->TagManager)) {
-            $arrayData = new ArrayData([
+            $arrayData = ArrayData::create([
                 'TagManagerCode' => $SiteConfig->TagManager,
                 'StoredNonce'    => $this->owner->StoredNonce()
             ]);
 
             return $arrayData->renderWith('TagManagerCode');
         }
+
         return false;
     }
 
@@ -60,12 +65,13 @@ class BaseSiteTreeExtension extends DataExtension
     {
         $SiteConfig = SiteConfig::current_site_config();
         if (!empty($SiteConfig->TagManager)) {
-            $arrayData = new ArrayData([
+            $arrayData = ArrayData::create([
                 'TagManagerCode' => $SiteConfig->TagManager
             ]);
 
             return $arrayData->renderWith('TagManagerNoScript');
         }
+
         return false;
     }
 }

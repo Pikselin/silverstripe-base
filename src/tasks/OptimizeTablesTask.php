@@ -15,7 +15,7 @@ class OptimizeTablesTask extends BuildTask
 
     protected static string $description = 'Optimizes database tables via the SQL optimize table command.';
 
-    public function execute(InputInterface $input, PolyOutput $output): int
+    protected function execute(InputInterface $input, PolyOutput $output): int
     {
         $tables = DB::query('SHOW TABLES');
 
@@ -23,7 +23,7 @@ class OptimizeTablesTask extends BuildTask
             // The key name changes depending on DB name, so grab the first value
             $tableName = array_values($table)[0];
 
-            $output->writeln("Optimizing table: <info>{$tableName}</info>");
+            $output->writeln(sprintf('Optimizing table: <info>%s</info>', $tableName));
             $res = DB::query(sprintf('OPTIMIZE TABLE `%s`', $tableName))->value();
             $output->writeln($res);
         }

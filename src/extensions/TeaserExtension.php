@@ -2,35 +2,39 @@
 
 namespace Pikselin\base;
 
+use SilverStripe\Core\Extension;
+use Page;
 use ImageUpload_Validator;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\LiteralField;
-use SilverStripe\ORM\DataExtension;
 
 /**
  * Class \Pikselin\base\TeaserExtension
  *
  * @property TeaserExtension $owner
- * @property string $TeaserText
+ * @property ?string $TeaserText
  * @property int $TeaserImageID
  * @method Image TeaserImage()
+ * @extends Extension<(Page & static)>
  */
-class TeaserExtension extends DataExtension
+class TeaserExtension extends Extension
 {
     private static $db = [
         'TeaserText' => 'HTMLText'
     ];
+
     private static $has_one = [
         'TeaserImage' => Image::class
     ];
+
     private static $owns = [
         'TeaserImage'
     ];
 
-    public function updateCMSFields(FieldList $fields)
+    protected function updateCMSFields(FieldList $fields)
     {
         $TeaserLead = LiteralField::create('TeaserLead', '<p>Add text and an image that will be used when this page is displayed in a teaser context such as when being listed as a sub page or used in a featured block.</p>');
 
@@ -56,6 +60,7 @@ class TeaserExtension extends DataExtension
         if ($this->owner->TeaserImage()->URL !== '') {
             return $this->owner->TeaserImage()->Fill(640, 480);
         }
+
         return false;
     }
 
@@ -64,6 +69,7 @@ class TeaserExtension extends DataExtension
         if ($this->owner->TeaserImage() !== '') {
             return $this->owner->TeaserImage()->Fill(640, 480);
         }
+
         return false;
     }
 
@@ -72,6 +78,7 @@ class TeaserExtension extends DataExtension
         if ($this->owner->TeaserImage()) {
             return $this->owner->TeaserImage()->Fill(640, 480);
         }
+
         return false;
     }
 }
