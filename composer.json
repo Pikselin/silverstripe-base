@@ -29,7 +29,7 @@
         "axllent/silverstripe-email-obfuscator": "^2.1.1",
         "silverstripe/mimevalidator": "^4.0.0",
         "silverstripe/mfa": "^6.1.0",
-        "ryanpotter/silverstripe-cms-theme": "dev-master",
+        "unclecheese/silverstripe-cms-theme": "dev-master",
         "lekoala/silverstripe-cms-actions": "^2.0.0",
         "undefinedoffset/sortablegridfield": "^3.0.2",
 
