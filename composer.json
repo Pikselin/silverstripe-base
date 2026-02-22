@@ -29,7 +29,7 @@
         "axllent/silverstripe-email-obfuscator": "^2.1.1",
         "silverstripe/mimevalidator": "^4.0.0",
         "silverstripe/mfa": "^6.1.0",
-        "unclecheese/silverstripe-cms-theme": "dev-master",
+        "ryanpotter/silverstripe-cms-theme": "dev-master",
         "lekoala/silverstripe-cms-actions": "^2.0.0",
         "undefinedoffset/sortablegridfield": "^3.0.2",
 
@@ -38,6 +38,12 @@
         "silverstripe/sharedraftcontent": "^4.1.0",
         "silverstripe/environmentcheck": "^4.1.0"
     },
+ "repositories": [
+        {
+            "type": "github",
+            "url": "https://github.com/unclecheese/silverstripe-cms-theme"
+        }
+    ],    
     "require-dev": {
         "dnadesign/silverstripe-populate": "^4.0.0"
     },
