@@ -25,3 +25,4 @@ Name: Pikselin-base-theme
 ---
 SilverStripe\SiteConfig\SiteConfig:
   cms_logo: '_resources/vendor/pikselin/silverstripe-base/client/images/pikselin.png'
+  cms_logo_width: 100
